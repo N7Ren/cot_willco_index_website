@@ -15,6 +15,7 @@ permissions:
   contents: write
 jobs:
   rendercv:
+    if: false
     name: RenderCV
     runs-on: ubuntu-latest
     steps:
