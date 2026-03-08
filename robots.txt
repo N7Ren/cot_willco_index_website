@@ -5,5 +5,12 @@ User-agent: *
 Disallow: /repositories/
 Disallow: /cv/
 Disallow: /books/
+Disallow: /publications/
+Disallow: /projects/
+Disallow: /teachings/
+Disallow: /dropdown/
+Disallow: /news/
+Disallow: /people/
+Disallow: /about/
 
 Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml
