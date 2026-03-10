@@ -12,7 +12,9 @@ Information according to § 5 TMG (German Telemedia Act) or applicable local law
 **Rene Kernegger e.U.**<br>
 Rosengasse 8<br>
 2722 Winzendorf<br>
-Austria
+Austria<br><br>
+VAT ID: ATU73920947<br>
+Company Registration Number: FN 615742d
 
 ## Represented By
 

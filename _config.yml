@@ -23,6 +23,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: /imprint/ # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 privacy_path: /privacy/ # set to path to include privacy link in the footer
+legal_path: /legal/ # set to path to include legal notice link in the footer
 back_to_top: true # set to false to disable the back to top button
 
 # -----------------------------------------------------------------------------

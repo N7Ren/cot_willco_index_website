@@ -1,14 +1,14 @@
 {% capture footer_contents %}
-  {% if site.impressum_path or site.privacy_path %}
-    {% if site.impressum_path %}
-      <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Imprint</a>
-    {% endif %}
-    {% if site.impressum_path and site.privacy_path %}
-      |
-    {% endif %}
-    {% if site.privacy_path %}
-      <a href="{{ site.url }}{{ site.baseurl }}{{ site.privacy_path }}">Privacy Policy</a>
-    {% endif %}
+  {% if site.impressum_path %}
+    <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Imprint</a>
+  {% endif %}
+  {% if site.privacy_path %}
+    {% if site.impressum_path %} | {% endif %}
+    <a href="{{ site.url }}{{ site.baseurl }}{{ site.privacy_path }}">Privacy Policy</a>
+  {% endif %}
+  {% if site.legal_path %}
+    {% if site.impressum_path or site.privacy_path %} | {% endif %}
+    <a href="{{ site.url }}{{ site.baseurl }}{{ site.legal_path }}">Legal Notice</a>
   {% endif %}
 {% endcapture %}
 
