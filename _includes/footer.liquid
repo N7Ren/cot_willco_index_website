@@ -6,6 +6,9 @@
   {% if site.impressum_path %}
     <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
   {% endif %}
+  {% if site.privacy_path %}
+    <a href="{{ site.url }}{{ site.baseurl }}{{ site.privacy_path }}">Privacy Policy</a>.
+  {% endif %}
   {% if site.last_updated %}
     Last updated: {{ 'now' | date: '%B %d, %Y' }}.
   {% endif %}
