@@ -1,0 +1,329 @@
+---
+layout: page
+title: Williams Commercial COT Index Screener
+permalink: /
+---
+
+<style>
+    .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .controls-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 5px 10px;
+        background: var(--global-bg-color, #1a1a1a);
+        border: 1px solid var(--global-divider-color, #333);
+        border-radius: 4px;
+    }
+
+    .threshold-input {
+        width: 70px;
+        background: var(--global-bg-color, #333);
+        color: var(--global-text-color, white);
+        border: 1px solid var(--global-divider-color, #444);
+        padding: 2px 5px;
+    }
+
+    .styled-table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+    }
+
+    th,
+    td {
+        padding: 8px 12px;
+        text-align: center;
+        border: 1px solid var(--global-divider-color, #333);
+    }
+
+    th {
+        background-color: var(--global-bg-color, #1a1a1a);
+        position: sticky;
+        top: 0;
+    }
+
+    .text-red {
+        color: #ff4d4d !important;
+    }
+
+    .text-green {
+        color: #00ff00 !important;
+    }
+
+    .text-white {
+        color: var(--global-text-color, white) !important;
+    }
+
+    .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    #last-updated {
+        font-size: 0.8rem;
+        color: #888;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div id="loading" class="loading-overlay">
+    <h2>Loading Data...</h2>
+</div>
+
+<div class="container-fluid" style="padding: 0;">
+    <div id="last-updated"></div>
+
+    <div class="button-container">
+        <div class="controls-group">
+            <label for="low">Low:</label>
+            <input class="threshold-input" type="number" id="low" min="0" max="100" step="1">
+            <label for="high">High:</label>
+            <input class="threshold-input" type="number" id="high" min="0" max="100" step="1">
+            <button class="btn btn-sm btn-primary" onclick="applyFilters()">Apply</button>
+        </div>
+
+        <button class="btn btn-sm btn-outline-primary" onclick="setMode('setups')">Show potential setups</button>
+        <button class="btn btn-sm btn-outline-primary" onclick="setMode('percentchange')">Show % changes >= 5%</button>
+
+        <div class="controls-group">
+            <label for="asset_dropdown">Asset:</label>
+            <select id="asset_dropdown" class="threshold-input" style="width: 200px;" onchange="applyFilters()">
+                <option value="">All Assets</option>
+            </select>
+        </div>
+
+        <div class="controls-group">
+            <label for="year_dropdown">Years:</label>
+            <select id="year_dropdown" class="threshold-input" style="width: 80px;" onchange="applyFilters()">
+                <option value="">All</option>
+                <option value="0.5">0.5</option>
+                <option value="1.0">1</option>
+                <option value="2.0">2</option>
+                <option value="3.0">3</option>
+                <option value="4.0">4</option>
+                <option value="5.0">5</option>
+            </select>
+        </div>
+
+        <button class="btn btn-sm btn-secondary" onclick="resetFilters()">Reset</button>
+    </div>
+
+    <p style="font-size: 0.9rem; margin-bottom: 20px;">If you want to learn more about how to use this
+        data in your trading see <a href="{{ '/resources/' | relative_url }}">Resources</a></p>
+
+    <div class="styled-table-container">
+        <table id="data-table" class="table table-sm table-hover">
+            <thead id="table-head"></thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+    <br />
+    <p style="font-size: 0.9rem;">If you want to learn more about how to use this data in your trading
+        see <a href="{{ '/resources/' | relative_url }}">Resources</a></p>
+</div>
+
+<script>
+    let allData = [];
+    let metadata = {};
+    let currentMode = 'all';
+    let sortConfig = { key: 'market_and_exchange_names', direction: 'asc' };
+
+    // Inject Jekyll data directly
+    const jekyllData = {{ site.data.data | jsonify }};
+
+    function init() {
+        try {
+            allData = jekyllData.data;
+            metadata = jekyllData.metadata;
+
+            // Set initial values
+            document.getElementById('low').value = metadata.default_low;
+            document.getElementById('high').value = metadata.default_high;
+            document.getElementById('last-updated').innerText = `Data Last Updated: ${metadata.last_updated}`;
+
+            // Populate dropdown (sorted alphabetically)
+            const dropdown = document.getElementById('asset_dropdown');
+            const sortedMarkets = [...metadata.markets].sort((a, b) => a.localeCompare(b));
+
+            sortedMarkets.forEach(market => {
+                const opt = document.createElement('option');
+                opt.value = market;
+                opt.innerText = market;
+                dropdown.appendChild(opt);
+            });
+
+            document.getElementById('loading').style.display = 'none';
+            renderTable();
+        } catch (error) {
+            console.error("Error loading data:", error);
+            document.getElementById('loading').innerHTML = `<h2>Error loading data</h2>`;
+        }
+    }
+
+    function setMode(mode) {
+        currentMode = mode;
+        renderTable();
+    }
+
+    function resetFilters() {
+        currentMode = 'all';
+        document.getElementById('asset_dropdown').value = "";
+        document.getElementById('year_dropdown').value = "";
+        document.getElementById('low').value = metadata.default_low;
+        document.getElementById('high').value = metadata.default_high;
+        renderTable();
+    }
+
+    function handleSort(key) {
+        if (sortConfig.key === key) {
+            sortConfig.direction = sortConfig.direction === 'asc' ? 'desc' : 'asc';
+        } else {
+            sortConfig.key = key;
+            sortConfig.direction = 'asc';
+        }
+        renderTable();
+    }
+
+    function applyFilters() {
+        renderTable();
+    }
+
+    function getColorClass(val, type, low, high) {
+        if (type === 'index') {
+            if (val <= low) return 'text-red';
+            if (val >= high) return 'text-green';
+        } else if (type === 'percent') {
+            if (val < 0) return 'text-red';
+            if (val > 0) return 'text-green';
+        }
+        return '';
+    }
+
+    function renderTable() {
+        const low = parseInt(document.getElementById('low').value);
+        const high = parseInt(document.getElementById('high').value);
+        const selectedAsset = document.getElementById('asset_dropdown').value;
+        const selectedYear = document.getElementById('year_dropdown').value;
+
+        let filtered = [...allData];
+
+        // 1. Primary Filter (Mode)
+        if (currentMode === 'setups') {
+            filtered = filtered.filter(row =>
+                row.willco_commercials_index >= high || row.willco_commercials_index <= low ||
+                row.willco_large_specs_index >= high || row.willco_large_specs_index <= low ||
+                row.willco_small_specs_index >= high || row.willco_small_specs_index <= low
+            );
+        } else if (currentMode === 'percentchange') {
+            filtered = filtered.filter(row =>
+                Math.abs(row['commercials_change_(%)']) >= 5 ||
+                Math.abs(row['large_speculators_change_(%)']) >= 5 ||
+                Math.abs(row['small_speculators_change_(%)']) >= 5
+            );
+        }
+
+        // 2. Secondary Filter (Asset Dropdown)
+        if (selectedAsset) {
+            filtered = filtered.filter(row => row.market_and_exchange_names === selectedAsset);
+        }
+
+        // 3. Secondary Filter (Year Dropdown)
+        if (selectedYear) {
+            // lookback_(y) values are strings like "0.5", "1.0", "2.0", etc.
+            filtered = filtered.filter(row => String(row['lookback_(y)']) === selectedYear);
+        }
+
+        // Apply Sorting
+        filtered.sort((a, b) => {
+            let valA = a[sortConfig.key];
+            let valB = b[sortConfig.key];
+
+            if (typeof valA === 'string') {
+                return sortConfig.direction === 'asc'
+                    ? valA.localeCompare(valB)
+                    : valB.localeCompare(valA);
+            } else {
+                return sortConfig.direction === 'asc'
+                    ? valA - valB
+                    : valB - valA;
+            }
+        });
+
+        const tbody = document.getElementById('table-body');
+        const thead = document.getElementById('table-head');
+
+        if (filtered.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="100%">No data available.</td></tr>';
+            return;
+        }
+
+        // Define columns and their display names
+        const columns = [
+            { id: 'market_and_exchange_names', label: 'Market' },
+            { id: 'lookback_(y)', label: 'Years' },
+            { id: 'willco_commercials_index', label: 'Comm Index', type: 'index' },
+            { id: 'willco_large_specs_index', label: 'Large Specs Index', type: 'index' },
+            { id: 'willco_small_specs_index', label: 'Small Specs Index', type: 'index' },
+            { id: 'commercials_net_(%)', label: 'Comm Net', type: 'percent' },
+            { id: 'large_speculators_net_(%)', label: 'Large Specs Net', type: 'percent' },
+            { id: 'small_speculators_net_(%)', label: 'Small Specs Net', type: 'percent' },
+            { id: 'commercials_change_(%)', label: 'Comm Change', type: 'percent' },
+            { id: 'large_speculators_change_(%)', label: 'Large Specs Change', type: 'percent' },
+            { id: 'small_speculators_change_(%)', label: 'Small Specs Change', type: 'percent' },
+            { id: 'as_of_date_in_form_yyyy_mm_dd', label: 'Date' }
+        ];
+
+        // Render Head
+        thead.innerHTML = `<tr>${columns.map(c => {
+            const isSorted = sortConfig.key === c.id;
+            const arrow = isSorted ? (sortConfig.direction === 'asc' ? ' ↑' : ' ↓') : '';
+            return `<th onclick="handleSort('${c.id}')" style="cursor: pointer; white-space: nowrap;">${c.label}${arrow}</th>`;
+        }).join('')}</tr>`;
+
+        // Render Body
+        tbody.innerHTML = filtered.map(row => {
+            return `<tr>${columns.map(col => {
+                let val = row[col.id];
+                let displayVal = val;
+
+                if (col.id === 'lookback_(y)') {
+                    // Convert "1.0" to 1, but keep "0.5"
+                    displayVal = parseFloat(val);
+                } else if (typeof val === 'number') {
+                    // Format to 2 decimals but remove trailing zeros
+                    displayVal = parseFloat(val.toFixed(2));
+
+                    // Add % sign for percent columns
+                    if (col.type === 'percent') {
+                        displayVal = displayVal + '%';
+                    }
+                }
+
+                const colorClass = getColorClass(val, col.type, low, high);
+                return `<td class="${colorClass}">${displayVal}</td>`;
+            }).join('')}</tr>`;
+        }).join('');
+    }
+
+    init();
+</script>
