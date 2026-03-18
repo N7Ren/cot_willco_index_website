@@ -1,8 +1,7 @@
 ---
 layout: page
 title: Williams Commercial COT Index Screener
-nav_title: Screener
-permalink: /
+permalink: /screener/
 ---
 
 {% include screener_content.html %}
