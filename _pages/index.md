@@ -140,6 +140,7 @@ permalink: /
     <br />
     <p style="font-size: 0.9rem;">If you want to learn more about how to use this data in your trading
         see <a href="{{ '/resources/' | relative_url }}">Resources</a></p>
+
 </div>
 
 <script>
@@ -281,15 +282,15 @@ permalink: /
         const columns = [
             { id: 'market_and_exchange_names', label: 'Market' },
             { id: 'lookback_(y)', label: 'Years' },
-            { id: 'willco_commercials_index', label: 'Comm Index', type: 'index' },
-            { id: 'willco_large_specs_index', label: 'Large Specs Index', type: 'index' },
-            { id: 'willco_small_specs_index', label: 'Small Specs Index', type: 'index' },
-            { id: 'commercials_net_(%)', label: 'Comm Net', type: 'percent' },
-            { id: 'large_speculators_net_(%)', label: 'Large Specs Net', type: 'percent' },
-            { id: 'small_speculators_net_(%)', label: 'Small Specs Net', type: 'percent' },
-            { id: 'commercials_change_(%)', label: 'Comm Change', type: 'percent' },
-            { id: 'large_speculators_change_(%)', label: 'Large Specs Change', type: 'percent' },
-            { id: 'small_speculators_change_(%)', label: 'Small Specs Change', type: 'percent' },
+            { id: 'willco_commercials_index', label: 'Commercials Index', type: 'index' },
+            { id: 'willco_large_specs_index', label: 'Noncommercials Index', type: 'index' },
+            { id: 'willco_small_specs_index', label: 'Nonreportable Index', type: 'index' },
+            { id: 'commercials_net_(%)', label: 'Commercials Net', type: 'percent' },
+            { id: 'large_speculators_net_(%)', label: 'Noncommercials Net', type: 'percent' },
+            { id: 'small_speculators_net_(%)', label: 'Nonreportable Net', type: 'percent' },
+            { id: 'commercials_change_(%)', label: 'Commercials Change', type: 'percent' },
+            { id: 'large_speculators_change_(%)', label: 'Noncommercials Change', type: 'percent' },
+            { id: 'small_speculators_change_(%)', label: 'Nonreportable Change', type: 'percent' },
             { id: 'as_of_date_in_form_yyyy_mm_dd', label: 'Date' }
         ];
 

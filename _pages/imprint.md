@@ -32,4 +32,5 @@ Website: [https://www.cotsetups.com](https://www.cotsetups.com)
 **Liability for Links:** Our site contains links to external websites over which we have no influence. Therefore, we cannot assume any liability for these external contents.
 
 ---
+
 &copy; Copyright 2026 . Powered by [Jekyll](https://jekyllrb.com/) with [al-folio](https://github.com/alshedivat/al-folio) theme. Hosted by [GitHub Pages](https://pages.github.com/). Photos from [Unsplash](https://unsplash.com).
