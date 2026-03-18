@@ -25,7 +25,7 @@ Trading in the foreign exchange (Forex), commodity, and futures markets involves
 
 ### 5. Accuracy of Information
 
-While we strive to provide accurate and up-to-date analysis, **Rene Kernegger** makes no warranties or representations as to the accuracy, completeness, or timeliness of the information. All market data is subject to change without notice. We are not liable for any loss or damage, including without limitation, any loss of profit, which may arise directly or indirectly from the use of or reliance on such information.
+While we strive to provide accurate and up-to-date analysis, **Rene Kernegger** makes no warranties or representations as to the accuracy, completeness, or timeliness of the information. Furthermore, any calculated index data, custom metrics, and derived values (including the Willco Index) are subject to calculation errors, data feed discrepancies, and programming defects. These calculations should not be solely relied upon for making financial decisions. All market data is subject to change without notice. We are not liable for any loss or damage, including without limitation, any loss of profit, which may arise directly or indirectly from the use of or reliance on such information.
 
 ### 6. Hypothetical & Past Performance
 

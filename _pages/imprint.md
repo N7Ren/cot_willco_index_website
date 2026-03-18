@@ -27,7 +27,7 @@ Website: [https://www.cotsetups.com](https://www.cotsetups.com)
 
 ## Disclaimer
 
-**Liability for Contents:** The contents of our pages were created with great care. However, we cannot guarantee the accuracy, completeness, or timeliness of the content.
+**Liability for Contents:** The contents of our pages were created with great care. However, we cannot guarantee the accuracy, completeness, or timeliness of the content. This includes any calculated index data, custom metrics, and derived values (e.g., the Willco Index), which are subject to calculation errors, data feed discrepancies, and programming defects.
 
 **Liability for Links:** Our site contains links to external websites over which we have no influence. Therefore, we cannot assume any liability for these external contents.
 
