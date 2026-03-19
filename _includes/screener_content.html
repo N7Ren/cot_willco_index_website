@@ -108,14 +108,14 @@
 
     <div class="controls-group">
       <label for="year_dropdown">Years:</label>
-      <select id="year_dropdown" class="threshold-input" style="width: 80px" onchange="applyFilters()">
-        <option value="">All</option>
-        <option value="0.5">0.5</option>
+      <select id="year_dropdown" class="threshold-input" style="width: 110px" onchange="applyFilters()">
+        <option value="0.5">Default (0.5)</option>
         <option value="1.0">1</option>
         <option value="2.0">2</option>
         <option value="3.0">3</option>
         <option value="4.0">4</option>
         <option value="5.0">5</option>
+        <option value="">All</option>
       </select>
     </div>
 
@@ -157,6 +157,7 @@
       // Set initial values
       document.getElementById('low').value = metadata.default_low;
       document.getElementById('high').value = metadata.default_high;
+      document.getElementById('year_dropdown').value = "0.5";
 
       const dataDate = allData.length > 0 ? allData[0].as_of_date_in_form_yyyy_mm_dd : 'N/A';
       document.getElementById('last-updated').innerHTML = `<strong>Position data as of:</strong> ${dataDate} <span style="margin-left: 15px; font-size: 0.9em; opacity: 0.7;">(Last updated: ${metadata.last_updated.split(' ')[0]})</span>`;
@@ -188,7 +189,7 @@
   function resetFilters() {
     currentMode = 'all';
     document.getElementById('asset_dropdown').value = "";
-    document.getElementById('year_dropdown').value = "";
+    document.getElementById('year_dropdown').value = "0.5";
     document.getElementById('low').value = metadata.default_low;
     document.getElementById('high').value = metadata.default_high;
     renderTable();
@@ -249,8 +250,8 @@
 
     // 3. Secondary Filter (Year Dropdown)
     if (selectedYear) {
-      // lookback_(y) values are strings like "0.5", "1.0", "2.0", etc.
-      filtered = filtered.filter(row => String(row['lookback_(y)']) === selectedYear);
+      const maxYear = parseFloat(selectedYear);
+      filtered = filtered.filter(row => parseFloat(row['lookback_(y)']) <= maxYear);
     }
 
     // Apply Sorting
