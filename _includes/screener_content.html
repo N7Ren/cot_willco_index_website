@@ -97,7 +97,7 @@
     </div>
 
     <button class="btn btn-sm btn-outline-primary" onclick="setMode('setups')">Show potential setups</button>
-    <button class="btn btn-sm btn-outline-primary" onclick="setMode('percentchange')">Show % changes >= 5%</button>
+    <button class="btn btn-sm btn-outline-primary" onclick="setMode('percentchange')" style="display: none;">Show % changes >= 5%</button>
 
     <div class="controls-group">
       <label for="asset_dropdown">Asset:</label>
@@ -159,7 +159,7 @@
       document.getElementById('high').value = metadata.default_high;
 
       const dataDate = allData.length > 0 ? allData[0].as_of_date_in_form_yyyy_mm_dd : 'N/A';
-      document.getElementById('last-updated').innerHTML = `<strong>Position data as of:</strong> ${dataDate} <span style="margin-left: 15px; font-size: 0.9em; opacity: 0.7;">(System last updated: ${metadata.last_updated})</span>`;
+      document.getElementById('last-updated').innerHTML = `<strong>Position data as of:</strong> ${dataDate} <span style="margin-left: 15px; font-size: 0.9em; opacity: 0.7;">(Last updated: ${metadata.last_updated.split(' ')[0]})</span>`;
 
       // Populate dropdown (sorted alphabetically)
       const dropdown = document.getElementById('asset_dropdown');
