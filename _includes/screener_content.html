@@ -139,14 +139,18 @@
   </p>
 </div>
 
+<script id="jekyll-data" type="application/json">
+  {{ site.data.data | jsonify }}
+</script>
+
 <script>
   let allData = [];
   let metadata = {};
   let currentMode = 'all';
   let sortConfig = { key: 'market_and_exchange_names', direction: 'asc' };
 
-  // Inject Jekyll data directly
-  const jekyllData = {{ site.data.data | jsonify }};
+  // Inject Jekyll data safely via JSON parse
+  const jekyllData = JSON.parse(document.getElementById('jekyll-data').textContent);
 
   function init() {
     try {
