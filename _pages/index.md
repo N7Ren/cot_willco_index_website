@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Williams Commercial COT Index Screener
+title: Williams Commercial Index COT Screener
 nav_title: Screener
 permalink: /
 ---
