@@ -63,9 +63,11 @@ on:
 
 permissions:
   contents: write
+  pages: write      # to deploy to Pages
+  id-token: write   # to verify the deployment originates from an appropriate source
 
 jobs:
-  deploy:
+  build:
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
@@ -98,8 +100,23 @@ jobs:
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
-      - name: Deploy 🚀
+      - name: Upload artifact 🚀
         if: github.event_name != 'pull_request'
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          folder: _site
+          path: _site
+
+  deploy:
+    needs: build
+    if: github.event_name != 'pull_request'
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages 🚀
+        id: deployment
+        uses: actions/deploy-pages@v4
