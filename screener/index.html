@@ -8,6 +8,14 @@
   let currentMode = 'all';
   let sortConfig = { key: 'market_and_exchange_names', direction: 'asc' };
 
+  function escapeHTML(str) {
+    if (str == null) return '';
+    return String(str).replace(/[&<>'"]/g, match => {
+      const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' };
+      return map[match];
+    });
+  }
+
   // Inject Jekyll data safely via JSON parse
   const jekyllData = JSON.parse(document.getElementById('jekyll-data').textContent);
 
@@ -22,7 +30,7 @@
       document.getElementById('year_dropdown').value = "0.5";
 
       const dataDate = allData.length > 0 ? allData[0].as_of_date_in_form_yyyy_mm_dd : 'N/A';
-      document.getElementById('last-updated').innerHTML = `<strong>Position data as of:</strong> ${dataDate} <span style="margin-left: 15px; font-size: 0.9em; opacity: 0.7;">(Last updated: ${metadata.last_updated.split(' ')[0]})</span>`;
+      document.getElementById('last-updated').innerHTML = `<strong>Position data as of:</strong> ${escapeHTML(dataDate)} <span style="margin-left: 15px; font-size: 0.9em; opacity: 0.7;">(Last updated: ${escapeHTML(metadata.last_updated.split(' ')[0])})</span>`;
 
       // Populate dropdown (sorted alphabetically)
       const dropdown = document.getElementById('asset_dropdown');
@@ -183,7 +191,7 @@
         }
 
         const colorClass = getColorClass(val, col.type, low, high);
-        return `<td class="${colorClass}">${displayVal}</td>`;
+        return `<td class="${escapeHTML(colorClass)}">${escapeHTML(displayVal)}</td>`;
       }).join('')}</tr>`;
     }).join('');
   }
