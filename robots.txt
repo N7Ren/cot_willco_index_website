@@ -1,4 +1,25 @@
 User-agent: *
-Disallow:
+Disallow: /repositories/
+Disallow: /cv/
+Disallow: /books/
+Disallow: /publications/
+Disallow: /projects/
+Disallow: /teachings/
+Disallow: /dropdown/
+Disallow: /news/
+Disallow: /people/
+Disallow: /about/
+# Disallow template/sample posts (all years before 2026)
+Disallow: /blog/2015/
+Disallow: /blog/2016/
+Disallow: /blog/2017/
+Disallow: /blog/2018/
+Disallow: /blog/2019/
+Disallow: /blog/2020/
+Disallow: /blog/2021/
+Disallow: /blog/2022/
+Disallow: /blog/2023/
+Disallow: /blog/2024/
+Disallow: /blog/2025/
 
-Sitemap: https://alshedivat.github.io/al-folio/sitemap.xml
+Sitemap: https://cotsetups.com/sitemap.xml
