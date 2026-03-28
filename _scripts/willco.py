@@ -98,6 +98,9 @@ class WillCo:
     def calculateWillCo(self, df, market, weeks):
         asset = df[df['cftc_contract_market_code'] == market].copy()
 
+        if asset.empty:
+            return asset
+
         asset['lookback_(y)'] = "{:.1f}".format(weeks / 52)
 
         available = len(asset)
@@ -131,9 +134,14 @@ class WillCo:
             asset['large_speculators_net_(%)'] = (asset.iloc[0]['large_speculators_net_percent'].round(2) * 100).astype(int)
             asset['small_speculators_net_(%)'] = (asset.iloc[0]['small_speculators_net_percent'].round(2) * 100).astype(int)
 
-            asset['commercials_change_(%)'] = ((asset.iloc[0]['percent_commercials_long'] - asset.iloc[1]['percent_commercials_long']).round(2) * 100).astype(int)
-            asset['large_speculators_change_(%)'] = ((asset.iloc[0]['percent_large_speculators_long'] - asset.iloc[1]['percent_large_speculators_long']).round(2) * 100).astype(int)
-            asset['small_speculators_change_(%)'] = ((asset.iloc[0]['percent_small_speculators_long'] - asset.iloc[1]['percent_small_speculators_long']).round(2) * 100).astype(int)
+            if len(asset) > 1:
+                asset['commercials_change_(%)'] = ((asset.iloc[0]['percent_commercials_long'] - asset.iloc[1]['percent_commercials_long']).round(2) * 100).astype(int)
+                asset['large_speculators_change_(%)'] = ((asset.iloc[0]['percent_large_speculators_long'] - asset.iloc[1]['percent_large_speculators_long']).round(2) * 100).astype(int)
+                asset['small_speculators_change_(%)'] = ((asset.iloc[0]['percent_small_speculators_long'] - asset.iloc[1]['percent_small_speculators_long']).round(2) * 100).astype(int)
+            else:
+                asset['commercials_change_(%)'] = 0
+                asset['large_speculators_change_(%)'] = 0
+                asset['small_speculators_change_(%)'] = 0
         else:
             asset['commercials_net_(%)'] = 0
             asset['large_speculators_net_(%)'] = 0
