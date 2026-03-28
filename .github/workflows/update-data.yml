@@ -16,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # Needed to commit and push changes
+      actions: write  # Needed to trigger other workflows via gh
 
     steps:
       - name: Checkout repository
