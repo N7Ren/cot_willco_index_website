@@ -97,7 +97,7 @@
     </div>
 
     <button class="btn btn-sm btn-outline-primary" onclick="setMode('setups')">Show potential setups</button>
-    <button class="btn btn-sm btn-outline-primary" onclick="setMode('percentchange')" style="display: none;">Show % changes >= 5%</button>
+    <button class="btn btn-sm btn-outline-primary" onclick="setMode('percentchange')" style="display: none">Show % changes >= 5%</button>
 
     <div class="controls-group">
       <label for="asset_dropdown">Asset:</label>
@@ -122,8 +122,7 @@
   </div>
 
   <p style="font-size: 0.9rem; margin-bottom: 20px">
-    If you want to learn more about how to use this data in your trading see <a
-      href="{{ '/resources/' | relative_url }}">Resources</a>
+    If you want to learn more about how to use this data in your trading see <a href="{{ '/resources/' | relative_url }}">Resources</a>
   </p>
 
   <div class="styled-table-container">
@@ -134,8 +133,7 @@
   </div>
   <br />
   <p style="font-size: 0.9rem">
-    If you want to learn more about how to use this data in your trading see <a
-      href="{{ '/resources/' | relative_url }}">Resources</a>
+    If you want to learn more about how to use this data in your trading see <a href="{{ '/resources/' | relative_url }}">Resources</a>
   </p>
 </div>
 
@@ -146,19 +144,19 @@
 <script>
   let allData = [];
   let metadata = {};
-  let currentMode = 'all';
-  let sortConfig = { key: 'market_and_exchange_names', direction: 'asc' };
+  let currentMode = "all";
+  let sortConfig = { key: "market_and_exchange_names", direction: "asc" };
 
   function escapeHTML(str) {
-    if (str == null) return '';
-    return String(str).replace(/[&<>'"]/g, match => {
-      const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' };
+    if (str == null) return "";
+    return String(str).replace(/[&<>'"]/g, (match) => {
+      const map = { "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" };
       return map[match];
     });
   }
 
   // Inject Jekyll data safely via JSON parse
-  const jekyllData = JSON.parse(document.getElementById('jekyll-data').textContent);
+  const jekyllData = JSON.parse(document.getElementById("jekyll-data").textContent);
 
   function init() {
     try {
@@ -166,29 +164,30 @@
       metadata = jekyllData.metadata;
 
       // Set initial values
-      document.getElementById('low').value = metadata.default_low;
-      document.getElementById('high').value = metadata.default_high;
-      document.getElementById('year_dropdown').value = "0.5";
+      document.getElementById("low").value = metadata.default_low;
+      document.getElementById("high").value = metadata.default_high;
+      document.getElementById("year_dropdown").value = "0.5";
 
-      const dataDate = allData.length > 0 ? allData[0].as_of_date_in_form_yyyy_mm_dd : 'N/A';
-      document.getElementById('last-updated').innerHTML = `<strong>Position data as of:</strong> ${escapeHTML(dataDate)} <span style="margin-left: 15px; font-size: 0.9em; opacity: 0.7;">(Last updated: ${escapeHTML(metadata.last_updated.split(' ')[0])})</span>`;
+      const dataDate = allData.length > 0 ? allData[0].as_of_date_in_form_yyyy_mm_dd : "N/A";
+      document.getElementById("last-updated").innerHTML =
+        `<strong>Position data as of:</strong> ${escapeHTML(dataDate)} <span style="margin-left: 15px; font-size: 0.9em; opacity: 0.7;">(Last updated: ${escapeHTML(metadata.last_updated.split(" ")[0])})</span>`;
 
       // Populate dropdown (sorted alphabetically)
-      const dropdown = document.getElementById('asset_dropdown');
+      const dropdown = document.getElementById("asset_dropdown");
       const sortedMarkets = [...metadata.markets].sort((a, b) => a.localeCompare(b));
 
-      sortedMarkets.forEach(market => {
-        const opt = document.createElement('option');
+      sortedMarkets.forEach((market) => {
+        const opt = document.createElement("option");
         opt.value = market;
         opt.innerText = market;
         dropdown.appendChild(opt);
       });
 
-      document.getElementById('loading').style.display = 'none';
+      document.getElementById("loading").style.display = "none";
       renderTable();
     } catch (error) {
       console.error("Error loading data:", error);
-      document.getElementById('loading').innerHTML = `<h2>Error loading data</h2>`;
+      document.getElementById("loading").innerHTML = `<h2>Error loading data</h2>`;
     }
   }
 
@@ -198,20 +197,20 @@
   }
 
   function resetFilters() {
-    currentMode = 'all';
-    document.getElementById('asset_dropdown').value = "";
-    document.getElementById('year_dropdown').value = "0.5";
-    document.getElementById('low').value = metadata.default_low;
-    document.getElementById('high').value = metadata.default_high;
+    currentMode = "all";
+    document.getElementById("asset_dropdown").value = "";
+    document.getElementById("year_dropdown").value = "0.5";
+    document.getElementById("low").value = metadata.default_low;
+    document.getElementById("high").value = metadata.default_high;
     renderTable();
   }
 
   function handleSort(key) {
     if (sortConfig.key === key) {
-      sortConfig.direction = sortConfig.direction === 'asc' ? 'desc' : 'asc';
+      sortConfig.direction = sortConfig.direction === "asc" ? "desc" : "asc";
     } else {
       sortConfig.key = key;
-      sortConfig.direction = 'asc';
+      sortConfig.direction = "asc";
     }
     renderTable();
   }
@@ -221,48 +220,53 @@
   }
 
   function getColorClass(val, type, low, high) {
-    if (type === 'index') {
-      if (val <= low) return 'text-red';
-      if (val >= high) return 'text-green';
-    } else if (type === 'percent') {
-      if (val < 0) return 'text-red';
-      if (val > 0) return 'text-green';
+    if (type === "index") {
+      if (val <= low) return "text-red";
+      if (val >= high) return "text-green";
+    } else if (type === "percent") {
+      if (val < 0) return "text-red";
+      if (val > 0) return "text-green";
     }
-    return '';
+    return "";
   }
 
   function renderTable() {
-    const low = parseInt(document.getElementById('low').value);
-    const high = parseInt(document.getElementById('high').value);
-    const selectedAsset = document.getElementById('asset_dropdown').value;
-    const selectedYear = document.getElementById('year_dropdown').value;
+    const low = parseInt(document.getElementById("low").value);
+    const high = parseInt(document.getElementById("high").value);
+    const selectedAsset = document.getElementById("asset_dropdown").value;
+    const selectedYear = document.getElementById("year_dropdown").value;
 
     let filtered = [...allData];
 
     // 1. Primary Filter (Mode)
-    if (currentMode === 'setups') {
-      filtered = filtered.filter(row =>
-        row.willco_commercials_index >= high || row.willco_commercials_index <= low ||
-        row.willco_large_specs_index >= high || row.willco_large_specs_index <= low ||
-        row.willco_small_specs_index >= high || row.willco_small_specs_index <= low
+    if (currentMode === "setups") {
+      filtered = filtered.filter(
+        (row) =>
+          row.willco_commercials_index >= high ||
+          row.willco_commercials_index <= low ||
+          row.willco_large_specs_index >= high ||
+          row.willco_large_specs_index <= low ||
+          row.willco_small_specs_index >= high ||
+          row.willco_small_specs_index <= low
       );
-    } else if (currentMode === 'percentchange') {
-      filtered = filtered.filter(row =>
-        Math.abs(row['commercials_change_(%)']) >= 5 ||
-        Math.abs(row['large_speculators_change_(%)']) >= 5 ||
-        Math.abs(row['small_speculators_change_(%)']) >= 5
+    } else if (currentMode === "percentchange") {
+      filtered = filtered.filter(
+        (row) =>
+          Math.abs(row["commercials_change_(%)"]) >= 5 ||
+          Math.abs(row["large_speculators_change_(%)"]) >= 5 ||
+          Math.abs(row["small_speculators_change_(%)"]) >= 5
       );
     }
 
     // 2. Secondary Filter (Asset Dropdown)
     if (selectedAsset) {
-      filtered = filtered.filter(row => row.market_and_exchange_names === selectedAsset);
+      filtered = filtered.filter((row) => row.market_and_exchange_names === selectedAsset);
     }
 
     // 3. Secondary Filter (Year Dropdown)
     if (selectedYear) {
       const maxYear = parseFloat(selectedYear);
-      filtered = filtered.filter(row => parseFloat(row['lookback_(y)']) <= maxYear);
+      filtered = filtered.filter((row) => parseFloat(row["lookback_(y)"]) <= maxYear);
     }
 
     // Apply Sorting
@@ -270,19 +274,15 @@
       let valA = a[sortConfig.key];
       let valB = b[sortConfig.key];
 
-      if (typeof valA === 'string') {
-        return sortConfig.direction === 'asc'
-          ? valA.localeCompare(valB)
-          : valB.localeCompare(valA);
+      if (typeof valA === "string") {
+        return sortConfig.direction === "asc" ? valA.localeCompare(valB) : valB.localeCompare(valA);
       } else {
-        return sortConfig.direction === 'asc'
-          ? valA - valB
-          : valB - valA;
+        return sortConfig.direction === "asc" ? valA - valB : valB - valA;
       }
     });
 
-    const tbody = document.getElementById('table-body');
-    const thead = document.getElementById('table-head');
+    const tbody = document.getElementById("table-body");
+    const thead = document.getElementById("table-head");
 
     if (filtered.length === 0) {
       tbody.innerHTML = '<tr><td colspan="100%">No data available.</td></tr>';
@@ -291,11 +291,11 @@
 
     // Define columns and their display names
     const columns = [
-      { id: 'market_and_exchange_names', label: 'Market' },
-      { id: 'lookback_(y)', label: 'Years' },
-      { id: 'willco_commercials_index', label: 'Commercials', type: 'index' },
-      { id: 'willco_large_specs_index', label: 'Noncommercials', type: 'index' },
-      { id: 'willco_small_specs_index', label: 'Nonreportable', type: 'index' }
+      { id: "market_and_exchange_names", label: "Market" },
+      { id: "lookback_(y)", label: "Years" },
+      { id: "willco_commercials_index", label: "Commercials", type: "index" },
+      { id: "willco_large_specs_index", label: "Noncommercials", type: "index" },
+      { id: "willco_small_specs_index", label: "Nonreportable", type: "index" },
       // { id: 'commercials_net_(%)', label: 'Commercials Net', type: 'percent' },
       // { id: 'large_speculators_net_(%)', label: 'Noncommercials Net', type: 'percent' },
       // { id: 'small_speculators_net_(%)', label: 'Nonreportable Net', type: 'percent' },
@@ -306,35 +306,41 @@
     ];
 
     // Render Head
-    thead.innerHTML = `<tr>${columns.map(c => {
-      const isSorted = sortConfig.key === c.id;
-      const arrow = isSorted ? (sortConfig.direction === 'asc' ? ' ↑' : ' ↓') : '';
-      return `<th onclick="handleSort('${c.id}')" style="cursor: pointer; white-space: nowrap;">${c.label}${arrow}</th>`;
-    }).join('')}</tr>`;
+    thead.innerHTML = `<tr>${columns
+      .map((c) => {
+        const isSorted = sortConfig.key === c.id;
+        const arrow = isSorted ? (sortConfig.direction === "asc" ? " ↑" : " ↓") : "";
+        return `<th onclick="handleSort('${c.id}')" style="cursor: pointer; white-space: nowrap;">${c.label}${arrow}</th>`;
+      })
+      .join("")}</tr>`;
 
     // Render Body
-    tbody.innerHTML = filtered.map(row => {
-      return `<tr>${columns.map(col => {
-        let val = row[col.id];
-        let displayVal = val;
+    tbody.innerHTML = filtered
+      .map((row) => {
+        return `<tr>${columns
+          .map((col) => {
+            let val = row[col.id];
+            let displayVal = val;
 
-        if (col.id === 'lookback_(y)') {
-          // Convert "1.0" to 1, but keep "0.5"
-          displayVal = parseFloat(val);
-        } else if (typeof val === 'number') {
-          // Format to 2 decimals but remove trailing zeros
-          displayVal = parseFloat(val.toFixed(2));
+            if (col.id === "lookback_(y)") {
+              // Convert "1.0" to 1, but keep "0.5"
+              displayVal = parseFloat(val);
+            } else if (typeof val === "number") {
+              // Format to 2 decimals but remove trailing zeros
+              displayVal = parseFloat(val.toFixed(2));
 
-          // Add % sign for percent columns
-          if (col.type === 'percent') {
-            displayVal = displayVal + '%';
-          }
-        }
+              // Add % sign for percent columns
+              if (col.type === "percent") {
+                displayVal = displayVal + "%";
+              }
+            }
 
-        const colorClass = getColorClass(val, col.type, low, high);
-        return `<td class="${escapeHTML(colorClass)}">${escapeHTML(displayVal)}</td>`;
-      }).join('')}</tr>`;
-    }).join('');
+            const colorClass = getColorClass(val, col.type, low, high);
+            return `<td class="${escapeHTML(colorClass)}">${escapeHTML(displayVal)}</td>`;
+          })
+          .join("")}</tr>`;
+      })
+      .join("");
   }
 
   init();
