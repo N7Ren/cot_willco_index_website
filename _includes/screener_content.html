@@ -118,6 +118,7 @@
       </select>
     </div>
 
+    <button class="btn btn-sm btn-outline-primary" id="combine-speculators-btn" onclick="toggleCombineSpeculators()">Combine Speculators</button>
     <button class="btn btn-sm btn-secondary" onclick="resetFilters()">Reset</button>
   </div>
 
@@ -145,7 +146,23 @@
   let allData = [];
   let metadata = {};
   let currentMode = "all";
+  let combineSpeculators = false;
   let sortConfig = { key: "market_and_exchange_names", direction: "asc" };
+
+  function toggleCombineSpeculators() {
+    combineSpeculators = !combineSpeculators;
+    const btn = document.getElementById("combine-speculators-btn");
+    btn.innerText = combineSpeculators ? "Separate Speculators" : "Combine Speculators";
+    if (combineSpeculators) {
+      btn.classList.remove("btn-outline-primary");
+      btn.classList.add("btn-primary");
+    } else {
+      btn.classList.remove("btn-primary");
+      btn.classList.add("btn-outline-primary");
+    }
+    sortConfig = { key: "market_and_exchange_names", direction: "asc" };
+    renderTable();
+  }
 
   function escapeHTML(str) {
     if (str == null) return "";
@@ -198,6 +215,13 @@
 
   function resetFilters() {
     currentMode = "all";
+    combineSpeculators = false;
+    const comboBtn = document.getElementById("combine-speculators-btn");
+    if (comboBtn) {
+      comboBtn.innerText = "Combine Speculators";
+      comboBtn.classList.remove("btn-primary");
+      comboBtn.classList.add("btn-outline-primary");
+    }
     document.getElementById("asset_dropdown").value = "";
     document.getElementById("year_dropdown").value = "0.5";
     document.getElementById("low").value = metadata.default_low;
@@ -271,8 +295,11 @@
 
     // Apply Sorting
     filtered.sort((a, b) => {
-      let valA = a[sortConfig.key];
-      let valB = b[sortConfig.key];
+      let valA = sortConfig.key === 'combined_speculators' ? (100 - a.willco_commercials_index) : a[sortConfig.key];
+      let valB = sortConfig.key === 'combined_speculators' ? (100 - b.willco_commercials_index) : b[sortConfig.key];
+
+      if (valA === undefined) valA = "";
+      if (valB === undefined) valB = "";
 
       if (typeof valA === "string") {
         return sortConfig.direction === "asc" ? valA.localeCompare(valB) : valB.localeCompare(valA);
@@ -290,20 +317,37 @@
     }
 
     // Define columns and their display names
-    const columns = [
-      { id: "market_and_exchange_names", label: "Market" },
-      { id: "lookback_(y)", label: "Years" },
-      { id: "willco_commercials_index", label: "Commercials", type: "index" },
-      { id: "willco_large_specs_index", label: "Noncommercials", type: "index" },
-      { id: "willco_small_specs_index", label: "Nonreportable", type: "index" },
-      // { id: 'commercials_net_(%)', label: 'Commercials Net', type: 'percent' },
-      // { id: 'large_speculators_net_(%)', label: 'Noncommercials Net', type: 'percent' },
-      // { id: 'small_speculators_net_(%)', label: 'Nonreportable Net', type: 'percent' },
-      // { id: 'commercials_change_(%)', label: 'Commercials Change', type: 'percent' },
-      // { id: 'large_speculators_change_(%)', label: 'Noncommercials Change', type: 'percent' },
-      // { id: 'small_speculators_change_(%)', label: 'Nonreportable Change', type: 'percent' },
-      // { id: 'as_of_date_in_form_yyyy_mm_dd', label: 'Date' }
-    ];
+    let columns = [];
+    if (combineSpeculators) {
+      columns = [
+        { id: "market_and_exchange_names", label: "Market" },
+        { id: "lookback_(y)", label: "Years" },
+        { id: "willco_commercials_index", label: "Commercials", type: "index" },
+        { id: "combined_speculators", label: "Speculators", type: "index" },
+        // { id: 'commercials_net_(%)', label: 'Commercials Net', type: 'percent' },
+        // { id: 'large_speculators_net_(%)', label: 'Large Speculators Net', type: 'percent' },
+        // { id: 'small_speculators_net_(%)', label: 'Small Speculators Net', type: 'percent' },
+        // { id: 'commercials_change_(%)', label: 'Commercials Change', type: 'percent' },
+        // { id: 'large_speculators_change_(%)', label: 'Large Speculators Change', type: 'percent' },
+        // { id: 'small_speculators_change_(%)', label: 'Small Speculators Change', type: 'percent' },
+        // { id: 'as_of_date_in_form_yyyy_mm_dd', label: 'Date' }
+      ];
+    } else {
+      columns = [
+        { id: "market_and_exchange_names", label: "Market" },
+        { id: "lookback_(y)", label: "Years" },
+        { id: "willco_commercials_index", label: "Commercials", type: "index" },
+        { id: "willco_large_specs_index", label: "Large Speculators", type: "index" },
+        { id: "willco_small_specs_index", label: "Small Speculators", type: "index" },
+        // { id: 'commercials_net_(%)', label: 'Commercials Net', type: 'percent' },
+        // { id: 'large_speculators_net_(%)', label: 'Large Speculators Net', type: 'percent' },
+        // { id: 'small_speculators_net_(%)', label: 'Small Speculators Net', type: 'percent' },
+        // { id: 'commercials_change_(%)', label: 'Commercials Change', type: 'percent' },
+        // { id: 'large_speculators_change_(%)', label: 'Large Speculators Change', type: 'percent' },
+        // { id: 'small_speculators_change_(%)', label: 'Small Speculators Change', type: 'percent' },
+        // { id: 'as_of_date_in_form_yyyy_mm_dd', label: 'Date' }
+      ];
+    }
 
     // Render Head
     thead.innerHTML = `<tr>${columns
@@ -319,7 +363,7 @@
       .map((row) => {
         return `<tr>${columns
           .map((col) => {
-            let val = row[col.id];
+            let val = col.id === 'combined_speculators' ? (100 - row.willco_commercials_index) : row[col.id];
             let displayVal = val;
 
             if (col.id === "lookback_(y)") {
