@@ -264,15 +264,26 @@
 
     // 1. Primary Filter (Mode)
     if (currentMode === "setups") {
-      filtered = filtered.filter(
-        (row) =>
-          row.willco_commercials_index >= high ||
-          row.willco_commercials_index <= low ||
-          row.willco_large_specs_index >= high ||
-          row.willco_large_specs_index <= low ||
-          row.willco_small_specs_index >= high ||
-          row.willco_small_specs_index <= low
-      );
+      filtered = filtered.filter((row) => {
+        if (combineSpeculators) {
+          const combined = 100 - row.willco_commercials_index;
+          return (
+            row.willco_commercials_index >= high ||
+            row.willco_commercials_index <= low ||
+            combined >= high ||
+            combined <= low
+          );
+        } else {
+          return (
+            row.willco_commercials_index >= high ||
+            row.willco_commercials_index <= low ||
+            row.willco_large_specs_index >= high ||
+            row.willco_large_specs_index <= low ||
+            row.willco_small_specs_index >= high ||
+            row.willco_small_specs_index <= low
+          );
+        }
+      });
     } else if (currentMode === "percentchange") {
       filtered = filtered.filter(
         (row) =>
