@@ -101,7 +101,7 @@
 
     <div class="controls-group">
       <label for="asset_dropdown">Asset:</label>
-      <select id="asset_dropdown" class="threshold-input" style="width: 200px" onchange="applyFilters()">
+      <select id="asset_dropdown" class="threshold-input" style="width: 200px" onchange="handleAssetChange()">
         <option value="">All Assets</option>
       </select>
     </div>
@@ -237,6 +237,16 @@
       sortConfig.direction = "asc";
     }
     renderTable();
+  }
+
+  function handleAssetChange() {
+    const selectedAsset = document.getElementById("asset_dropdown").value;
+    if (selectedAsset !== "") {
+      document.getElementById("year_dropdown").value = "5.0";
+    } else {
+      document.getElementById("year_dropdown").value = "0.5";
+    }
+    applyFilters();
   }
 
   function applyFilters() {
