@@ -90,14 +90,11 @@
   <div class="button-container">
     <div class="controls-group">
       <label for="low">Low:</label>
-      <input class="threshold-input" type="number" id="low" min="0" max="100" step="1" />
+      <input class="threshold-input" type="number" id="low" min="0" max="100" step="1" oninput="applyFilters()" />
       <label for="high">High:</label>
-      <input class="threshold-input" type="number" id="high" min="0" max="100" step="1" />
-      <button class="btn btn-sm btn-primary" onclick="applyFilters()">Apply</button>
+      <input class="threshold-input" type="number" id="high" min="0" max="100" step="1" oninput="applyFilters()" />
     </div>
 
-    <button class="btn btn-sm btn-outline-primary" onclick="setMode('setups')">Show potential setups</button>
-    <button class="btn btn-sm btn-outline-primary" onclick="setMode('percentchange')" style="display: none">Show % changes >= 5%</button>
 
     <div class="controls-group">
       <label for="asset_dropdown">Asset:</label>
@@ -118,7 +115,13 @@
       </select>
     </div>
 
-    <button class="btn btn-sm btn-outline-primary" id="combine-speculators-btn" onclick="toggleCombineSpeculators()">Combine Speculators</button>
+    <div class="controls-group">
+      <button class="btn btn-sm btn-outline-primary" id="combine-speculators-btn" onclick="toggleCombineSpeculators()">Combine Speculators</button>
+      <button class="btn btn-sm btn-outline-primary" onclick="setMode('setups')">Show potential setups</button>
+      <input type="checkbox" id="strict_checkbox" onchange="applyFilters()" />
+      <label for="strict_checkbox" style="margin-bottom: 0; cursor: pointer;">Strict</label>
+    </div>
+    <button class="btn btn-sm btn-outline-primary" onclick="setMode('percentchange')" style="display: none">Show % changes >= 5%</button>
     <button class="btn btn-sm btn-secondary" onclick="resetFilters()">Reset</button>
   </div>
 
@@ -226,6 +229,7 @@
     document.getElementById("year_dropdown").value = "0.5";
     document.getElementById("low").value = metadata.default_low;
     document.getElementById("high").value = metadata.default_high;
+    document.getElementById("strict_checkbox").checked = false;
     renderTable();
   }
 
@@ -274,24 +278,39 @@
 
     // 1. Primary Filter (Mode)
     if (currentMode === "setups") {
+      const isStrict = document.getElementById("strict_checkbox").checked;
       filtered = filtered.filter((row) => {
         if (combineSpeculators) {
           const combined = 100 - row.willco_commercials_index;
-          return (
-            row.willco_commercials_index >= high ||
-            row.willco_commercials_index <= low ||
-            combined >= high ||
-            combined <= low
-          );
+          if (isStrict) {
+            return (
+              (row.willco_commercials_index >= high && combined <= low) ||
+              (row.willco_commercials_index <= low && combined >= high)
+            );
+          } else {
+            return (
+              row.willco_commercials_index >= high ||
+              row.willco_commercials_index <= low ||
+              combined >= high ||
+              combined <= low
+            );
+          }
         } else {
-          return (
-            row.willco_commercials_index >= high ||
-            row.willco_commercials_index <= low ||
-            row.willco_large_specs_index >= high ||
-            row.willco_large_specs_index <= low ||
-            row.willco_small_specs_index >= high ||
-            row.willco_small_specs_index <= low
-          );
+          if (isStrict) {
+            return (
+              (row.willco_commercials_index >= high && row.willco_large_specs_index <= low && row.willco_small_specs_index <= low) ||
+              (row.willco_commercials_index <= low && row.willco_large_specs_index >= high && row.willco_small_specs_index >= high)
+            );
+          } else {
+            return (
+              row.willco_commercials_index >= high ||
+              row.willco_commercials_index <= low ||
+              row.willco_large_specs_index >= high ||
+              row.willco_large_specs_index <= low ||
+              row.willco_small_specs_index >= high ||
+              row.willco_small_specs_index <= low
+            );
+          }
         }
       });
     } else if (currentMode === "percentchange") {
