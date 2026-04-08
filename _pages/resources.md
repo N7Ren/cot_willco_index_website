@@ -16,7 +16,7 @@ nav_order: 9
 
 ### Trading
 
-If you want to learn more about how to use the Williams Commercial Index and COT data in your trading check out these resources:
+If you want to learn more about how to apply the Williams Commercial Index and COT data in your trading check out these resources:
 
 - [**Larry Williams** - Trade Stocks and Commodities with the Insiders (View on Amazon - Paid Link)](https://amzn.to/4ctO59J){:target="\_blank" rel="sponsored nofollow"}
 - [**Jack D. Schwager** - Unknown Market Wizards: The best traders you've never heard of (View on Amazon - Paid Link)](https://amzn.to/409s6gT){:target="\_blank" rel="sponsored nofollow"} (Specifically the Interview with Jason Shapiro)

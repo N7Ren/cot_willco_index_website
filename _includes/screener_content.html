@@ -33,6 +33,7 @@
     width: 100%;
     border-collapse: collapse;
     font-size: 0.9rem;
+    border-top: 1px solid var(--global-divider-color, #333);
   }
 
   th,
@@ -457,8 +458,8 @@
               // Convert "1.0" to 1, but keep "0.5"
               displayVal = parseFloat(val);
             } else if (typeof val === "number") {
-              // Format to 2 decimals but remove trailing zeros
-              displayVal = parseFloat(val.toFixed(2));
+              // Format to integer (no fractions for index calculations)
+              displayVal = Math.round(val);
 
               // Add % sign for percent columns
               if (col.type === "percent") {

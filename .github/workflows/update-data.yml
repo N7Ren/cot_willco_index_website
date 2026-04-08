@@ -36,11 +36,14 @@ jobs:
       - name: Run build script
         run: python _scripts/build.py
 
+      - name: Generate post
+        run: python _scripts/generate_post.py
+
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add _data/data.json _data/cot.csv
+          git add _data/data.json _data/cot.csv _posts/
           if ! git diff --staged --quiet; then
             git commit -m "Auto-update COT data: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
             
