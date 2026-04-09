@@ -62,3 +62,24 @@ layout: default
     {% include giscus.liquid %}
   {% endif %}
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Select all tables with the screener-table class
+    const tables = document.querySelectorAll('.screener-table');
+    
+    tables.forEach(table => {
+      const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.innerText.trim());
+      const rows = table.querySelectorAll('tbody tr');
+      
+      rows.forEach(row => {
+        const cells = row.querySelectorAll('td');
+        cells.forEach((cell, index) => {
+          if (headers[index]) {
+            cell.setAttribute('data-label', headers[index]);
+          }
+        });
+      });
+    });
+  });
+</script>
