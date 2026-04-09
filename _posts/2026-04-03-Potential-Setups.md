@@ -31,7 +31,7 @@ toc:
 
 
 <details open markdown="1">
-<summary><h2>Speculators combined</h2></summary>
+<summary><h2 id="speculators-combined">Speculators combined</h2></summary>
 
 | Market | Years | Commercials | Speculators |
 |:---:|:---:|:---:|:---:|
@@ -99,14 +99,14 @@ toc:
 | WHEAT-SRW | 1 | <span class="text-red">0</span> | <span class="text-green">100</span> |
 | WHEAT-SRW | 2 | <span class="text-red">0</span> | <span class="text-green">100</span> |
 | WHEAT-SRW | 3 | <span class="text-red">0</span> | <span class="text-green">100</span> |
-{: .table .table-sm .table-hover .screener-table .w-auto }
+{: .table .table-sm .table-hover .screener-table .w-100 }
 
 If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
 
 </details>
 
 <details open markdown="1">
-<summary><h2>Speculators separated (strict)</h2></summary>
+<summary><h2 id="speculators-separated-strict">Speculators separated (strict)</h2></summary>
 
 | Market | Years | Commercials | Large Speculators | Small Speculators |
 |:---:|:---:|:---:|:---:|:---:|
@@ -126,14 +126,14 @@ If you want to learn more about how to apply this data in your trading see [Reso
 | UST 2Y NOTE | 1 | <span class="text-green">100</span> | <span class="text-red">0</span> | <span class="text-red">0</span> |
 | UST 2Y NOTE | 2 | <span class="text-green">100</span> | <span class="text-red">0</span> | <span class="text-red">0</span> |
 | WHEAT-SRW | 0.5 | <span class="text-red">0</span> | <span class="text-green">100</span> | <span class="text-green">90</span> |
-{: .table .table-sm .table-hover .screener-table .w-auto }
+{: .table .table-sm .table-hover .screener-table .w-100 }
 
 If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
 
 </details>
 
 <details open markdown="1">
-<summary><h2>Speculators separated (loose)</h2></summary>
+<summary><h2 id="speculators-separated-loose">Speculators separated (loose)</h2></summary>
 
 | Market | Years | Commercials | Large Speculators | Small Speculators |
 |:---:|:---:|:---:|:---:|:---:|
@@ -233,7 +233,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 | WHEAT-SRW | 1 | <span class="text-red">0</span> | <span class="text-green">100</span> | 65 |
 | WHEAT-SRW | 2 | <span class="text-red">0</span> | <span class="text-green">98</span> | 70 |
 | WHEAT-SRW | 3 | <span class="text-red">0</span> | <span class="text-green">98</span> | 62 |
-{: .table .table-sm .table-hover .screener-table .w-auto }
+{: .table .table-sm .table-hover .screener-table .w-100 }
 
 If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
 

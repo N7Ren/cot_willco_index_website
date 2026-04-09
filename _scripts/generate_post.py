@@ -38,7 +38,7 @@ def generate_markdown_table(data, cols):
                 row_cells.append(str(val))
         rows.append("| " + " | ".join(row_cells) + " |")
         
-    return "\n".join([header_line, sep_line] + rows) + "\n{: .table .table-sm .table-hover .screener-table .w-auto }"
+    return "\n".join([header_line, sep_line] + rows) + "\n{: .table .table-sm .table-hover .screener-table .w-100 }"
 
 def main():
     data_path = os.path.join(os.path.dirname(__file__), '../_data/data.json')
@@ -148,7 +148,7 @@ def main():
         resources_text = "If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})\n\n"
         
         f.write(f"<details open markdown=\"1\">\n")
-        f.write(f"<summary><h2>Speculators combined</h2></summary>\n\n")
+        f.write(f"<summary><h2 id=\"speculators-combined\">Speculators combined</h2></summary>\n\n")
         if combined_data:
             f.write(generate_markdown_table(combined_data, cols_combined) + "\n\n")
         else:
@@ -157,7 +157,7 @@ def main():
         f.write("</details>\n\n")
             
         f.write(f"<details open markdown=\"1\">\n")
-        f.write(f"<summary><h2>Speculators separated (strict)</h2></summary>\n\n")
+        f.write(f"<summary><h2 id=\"speculators-separated-strict\">Speculators separated (strict)</h2></summary>\n\n")
         if sep_strict_data:
             f.write(generate_markdown_table(sep_strict_data, cols_separated) + "\n\n")
         else:
@@ -166,7 +166,7 @@ def main():
         f.write("</details>\n\n")
             
         f.write(f"<details open markdown=\"1\">\n")
-        f.write(f"<summary><h2>Speculators separated (loose)</h2></summary>\n\n")
+        f.write(f"<summary><h2 id=\"speculators-separated-loose\">Speculators separated (loose)</h2></summary>\n\n")
         if sep_loose_data:
             f.write(generate_markdown_table(sep_loose_data, cols_separated) + "\n\n")
         else:
