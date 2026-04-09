@@ -3,6 +3,8 @@ layout: post
 title: "2026-04-03 Potential Setups"
 date: 2026-04-03
 position_date: "2026-03-31"
+toc:
+  beginning: true
 ---
 
 <style>
@@ -28,7 +30,8 @@ position_date: "2026-03-31"
 
 
 
-## Speculators combined
+<details open markdown="1">
+<summary><h2>Speculators combined</h2></summary>
 
 | Market | Years | Commercials | Speculators |
 |:---:|:---:|:---:|:---:|
@@ -100,7 +103,10 @@ position_date: "2026-03-31"
 
 If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
 
-## Speculators separated (strict)
+</details>
+
+<details open markdown="1">
+<summary><h2>Speculators separated (strict)</h2></summary>
 
 | Market | Years | Commercials | Large Speculators | Small Speculators |
 |:---:|:---:|:---:|:---:|:---:|
@@ -124,7 +130,10 @@ If you want to learn more about how to apply this data in your trading see [Reso
 
 If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
 
-## Speculators separated (loose)
+</details>
+
+<details open markdown="1">
+<summary><h2>Speculators separated (loose)</h2></summary>
 
 | Market | Years | Commercials | Large Speculators | Small Speculators |
 |:---:|:---:|:---:|:---:|:---:|
@@ -227,4 +236,6 @@ If you want to learn more about how to apply this data in your trading see [Reso
 {: .table .table-sm .table-hover .screener-table .w-auto }
 
 If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
+
+</details>
 

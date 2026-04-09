@@ -120,6 +120,8 @@ def main():
         f.write(f"title: \"{date_str} Potential Setups\"\n")
         f.write(f"date: {date_str}\n")
         f.write(f"position_date: \"{position_date}\"\n")
+        f.write(f"toc:\n")
+        f.write(f"  beginning: true\n")
         f.write(f"---\n\n")
         
         f.write(f"<style>\n")
@@ -145,26 +147,32 @@ def main():
         
         resources_text = "If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})\n\n"
         
-        f.write(f"\n\n## Speculators combined\n\n")
+        f.write(f"<details open markdown=\"1\">\n")
+        f.write(f"<summary><h2>Speculators combined</h2></summary>\n\n")
         if combined_data:
             f.write(generate_markdown_table(combined_data, cols_combined) + "\n\n")
         else:
             f.write("No setups found.\n\n")
         f.write(resources_text)
+        f.write("</details>\n\n")
             
-        f.write(f"## Speculators separated (strict)\n\n")
+        f.write(f"<details open markdown=\"1\">\n")
+        f.write(f"<summary><h2>Speculators separated (strict)</h2></summary>\n\n")
         if sep_strict_data:
             f.write(generate_markdown_table(sep_strict_data, cols_separated) + "\n\n")
         else:
             f.write("No setups found.\n\n")
         f.write(resources_text)
+        f.write("</details>\n\n")
             
-        f.write(f"## Speculators separated (loose)\n\n")
+        f.write(f"<details open markdown=\"1\">\n")
+        f.write(f"<summary><h2>Speculators separated (loose)</h2></summary>\n\n")
         if sep_loose_data:
             f.write(generate_markdown_table(sep_loose_data, cols_separated) + "\n\n")
         else:
             f.write("No setups found.\n\n")
         f.write(resources_text)
+        f.write("</details>\n\n")
             
     print(f"Generated {post_filename}")
 

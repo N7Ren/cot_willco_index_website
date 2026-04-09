@@ -259,3 +259,71 @@ ul.task-list input[type="checkbox"] {
 .d2h-diff-table {
   position: relative;
 }
+
+// Collapsible Sections (Details/Summary)
+.post-content {
+  details {
+    margin-bottom: 2rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    background-color: var(--global-card-bg-color);
+    transition: all 0.3s ease;
+    
+    summary {
+      padding: 12px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      color: var(--global-theme-color);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      outline: none;
+      user-select: none;
+      
+      &::-webkit-details-marker {
+        display: none;
+      }
+      
+      &:hover {
+        color: var(--global-hover-color);
+        background-color: rgba(var(--global-theme-color-rgb), 0.05);
+      }
+
+      &::before {
+        content: "▶";
+        display: inline-block;
+        margin-right: 12px;
+        transition: transform 0.2s ease;
+        font-size: 0.8rem;
+        opacity: 0.7;
+      }
+      
+      h2 {
+        display: inline;
+        margin: 0;
+        font-size: 1.4rem;
+        color: inherit;
+        border-bottom: none !important;
+      }
+    }
+    
+    &[open] {
+      border-color: var(--global-theme-color);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+      summary {
+        border-bottom: 1px solid var(--global-divider-color);
+        margin-bottom: 15px;
+        
+        &::before {
+          transform: rotate(90deg);
+        }
+      }
+      
+      // Add padding to content within details
+      & > *:not(summary) {
+        padding: 0 20px 20px 20px;
+      }
+    }
+  }
+}
