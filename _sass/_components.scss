@@ -264,9 +264,6 @@ ul.task-list input[type="checkbox"] {
 .post-content {
   details {
     margin-bottom: 2rem;
-    border: 1px solid var(--global-divider-color);
-    border-radius: 8px;
-    background-color: var(--global-card-bg-color);
     transition: all 0.3s ease;
     
     summary {
@@ -308,8 +305,6 @@ ul.task-list input[type="checkbox"] {
     }
     
     &[open] {
-      border-color: var(--global-theme-color);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 
       summary {
         border-bottom: 1px solid var(--global-divider-color);
@@ -325,77 +320,106 @@ ul.task-list input[type="checkbox"] {
         padding: 0 20px 20px 20px;
       }
     }
+  }
+}
 
-    /* Responsive Card Layout for Blog/Screener Tables */
-    @media (max-width: 767px) {
-      .screener-table {
-        display: block;
-        width: 100% !important;
-        border: none !important;
-        background: transparent !important;
-        
-        thead {
+/* Screener Table Component */
+.screener-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  
+  th, td {
+    padding: 8px 12px;
+    text-align: center;
+    border: 1px solid var(--global-divider-color, #333) !important;
+  }
+  
+  th {
+    background-color: var(--global-bg-color, #1a1a1a);
+    font-weight: 600;
+  }
+
+  /* Responsive Card Layout for Screener Tables (Mobile Only) */
+  @media (max-width: 767px) {
+    display: block;
+    width: 100% !important;
+    border: none !important;
+    background: transparent !important;
+    
+    thead {
+      display: none;
+    }
+
+    tbody,
+    tr,
+    td {
+      display: block;
+      width: 100%;
+    }
+
+    tr {
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--global-divider-color) !important;
+      border-radius: 8px;
+      background-color: var(--global-card-bg-color);
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    td {
+      border: none !important;
+      border-bottom: 1px solid var(--global-divider-color) !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      text-align: right;
+      font-size: 0.95rem;
+
+      &:last-child {
+        border-bottom: none !important;
+      }
+
+      &::before {
+        content: attr(data-label);
+        font-weight: 600;
+        text-align: left;
+        color: var(--global-text-color-light);
+        margin-right: 15px;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* First child is usually the Market name - style it as a header */
+      &:first-child {
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.1rem;
+        background-color: rgba(var(--global-theme-color-rgb), 0.05);
+        color: var(--global-theme-color);
+        padding: 14px 16px;
+        border-bottom: 2px solid var(--global-theme-color) !important;
+        text-align: center;
+
+        &::before {
           display: none;
-        }
-
-        tbody,
-        tr,
-        td {
-          display: block;
-          width: 100%;
-        }
-
-        tr {
-          margin-bottom: 1.5rem;
-          border: 1px solid var(--global-divider-color) !important;
-          border-radius: 8px;
-          background-color: var(--global-card-bg-color);
-          overflow: hidden;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        td {
-          border: none !important;
-          border-bottom: 1px solid var(--global-divider-color) !important;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 12px 16px;
-          text-align: right;
-          font-size: 0.95rem;
-
-          &:last-child {
-            border-bottom: none !important;
-          }
-
-          &::before {
-            content: attr(data-label);
-            font-weight: 600;
-            text-align: left;
-            color: var(--global-text-color-light);
-            margin-right: 15px;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-          }
-
-          /* First child is usually the Market name - style it as a header */
-          &:first-child {
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1.1rem;
-            background-color: rgba(var(--global-theme-color-rgb), 0.05);
-            color: var(--global-theme-color);
-            padding: 14px 16px;
-            border-bottom: 2px solid var(--global-theme-color) !important;
-            text-align: center;
-
-            &::before {
-              display: none;
-            }
-          }
         }
       }
     }
   }
+}
+
+.text-red {
+  color: #ff4d4d !important;
+}
+
+.text-green {
+  color: #00ff00 !important;
+}
+
+.text-white {
+  color: var(--global-text-color, white) !important;
 }

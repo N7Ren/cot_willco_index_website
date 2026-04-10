@@ -29,36 +29,10 @@
     overflow-x: auto;
   }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.9rem;
-    border-top: 1px solid var(--global-divider-color, #333);
-  }
-
-  th,
-  td {
-    padding: 8px 12px;
-    text-align: center;
-    border: 1px solid var(--global-divider-color, #333);
-  }
-
-  th {
-    background-color: var(--global-bg-color, #1a1a1a);
+  .screener-table th {
     position: sticky;
     top: 0;
-  }
-
-  .text-red {
-    color: #ff4d4d !important;
-  }
-
-  .text-green {
-    color: #00ff00 !important;
-  }
-
-  .text-white {
-    color: var(--global-text-color, white) !important;
+    z-index: 10;
   }
 
   .loading-overlay {
@@ -80,48 +54,6 @@
     margin-bottom: 10px;
   }
 
-  /* Responsive Card Layout for Mobile */
-  @media (max-width: 767px) {
-    #data-table thead {
-      display: none;
-    }
-    #data-table,
-    #data-table tbody,
-    #data-table tr,
-    #data-table td {
-      display: block;
-      width: 100%;
-    }
-    #data-table tr {
-      margin-bottom: 15px;
-      border: 1px solid var(--global-divider-color, #333) !important;
-      border-radius: 6px;
-      background-color: var(--global-bg-color, transparent);
-    }
-    #data-table td {
-      border: none !important;
-      border-bottom: 1px solid var(--global-divider-color, #333) !important;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 15px;
-      text-align: right;
-    }
-    #data-table td:last-child {
-      border-bottom: none !important;
-    }
-    #data-table td::before {
-      content: attr(data-label);
-      text-align: left;
-    }
-    #data-table td:first-child {
-      justify-content: flex-start;
-      font-size: 1.1rem;
-    }
-    #data-table td:first-child::before {
-      content: none;
-    }
-  }
 </style>
 
 <div id="loading" class="loading-overlay">
@@ -177,7 +109,7 @@
   </p>
 
   <div class="styled-table-container">
-    <table id="data-table" class="table table-sm table-hover">
+    <table id="data-table" class="table table-sm table-hover screener-table">
       <thead id="table-head"></thead>
       <tbody id="table-body"></tbody>
     </table>

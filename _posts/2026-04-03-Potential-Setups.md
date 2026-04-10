@@ -7,31 +7,14 @@ toc:
   beginning: true
 ---
 
-<style>
-  .screener-table {
-    border-collapse: collapse;
-    font-size: 0.9rem;
-  }
-  .screener-table th,
-  .screener-table td {
-    padding: 8px 12px;
-    border: 1px solid var(--global-divider-color, #333) !important;
-  }
-  .screener-table th {
-    background-color: var(--global-bg-color, #1a1a1a);
-  }
-  .text-red {
-    color: #ff4d4d !important;
-  }
-  .text-green {
-    color: #00ff00 !important;
-  }
-</style>
+
 
 
 
 <details open markdown="1">
 <summary><h2 id="speculators-combined">Speculators combined</h2></summary>
+
+If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
 
 | Market | Years | Commercials | Speculators |
 |:---:|:---:|:---:|:---:|
@@ -108,6 +91,8 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <details open markdown="1">
 <summary><h2 id="speculators-separated-strict">Speculators separated (strict)</h2></summary>
 
+If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
+
 | Market | Years | Commercials | Large Speculators | Small Speculators |
 |:---:|:---:|:---:|:---:|:---:|
 | AUSTRALIAN DOLLAR | 0.5 | <span class="text-red">0</span> | <span class="text-green">100</span> | <span class="text-green">90</span> |
@@ -134,6 +119,8 @@ If you want to learn more about how to apply this data in your trading see [Reso
 
 <details open markdown="1">
 <summary><h2 id="speculators-separated-loose">Speculators separated (loose)</h2></summary>
+
+If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
 
 | Market | Years | Commercials | Large Speculators | Small Speculators |
 |:---:|:---:|:---:|:---:|:---:|

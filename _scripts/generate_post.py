@@ -124,31 +124,11 @@ def main():
         f.write(f"  beginning: true\n")
         f.write(f"---\n\n")
         
-        f.write(f"<style>\n")
-        f.write(f"  .screener-table {{\n")
-        f.write(f"    border-collapse: collapse;\n")
-        f.write(f"    font-size: 0.9rem;\n")
-        f.write(f"  }}\n")
-        f.write(f"  .screener-table th,\n")
-        f.write(f"  .screener-table td {{\n")
-        f.write(f"    padding: 8px 12px;\n")
-        f.write(f"    border: 1px solid var(--global-divider-color, #333) !important;\n")
-        f.write(f"  }}\n")
-        f.write(f"  .screener-table th {{\n")
-        f.write(f"    background-color: var(--global-bg-color, #1a1a1a);\n")
-        f.write(f"  }}\n")
-        f.write(f"  .text-red {{\n")
-        f.write(f"    color: #ff4d4d !important;\n")
-        f.write(f"  }}\n")
-        f.write(f"  .text-green {{\n")
-        f.write(f"    color: #00ff00 !important;\n")
-        f.write(f"  }}\n")
-        f.write(f"</style>\n\n")
-        
         resources_text = "If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})\n\n"
         
         f.write(f"<details open markdown=\"1\">\n")
         f.write(f"<summary><h2 id=\"speculators-combined\">Speculators combined</h2></summary>\n\n")
+        f.write(resources_text)
         if combined_data:
             f.write(generate_markdown_table(combined_data, cols_combined) + "\n\n")
         else:
@@ -158,6 +138,7 @@ def main():
             
         f.write(f"<details open markdown=\"1\">\n")
         f.write(f"<summary><h2 id=\"speculators-separated-strict\">Speculators separated (strict)</h2></summary>\n\n")
+        f.write(resources_text)
         if sep_strict_data:
             f.write(generate_markdown_table(sep_strict_data, cols_separated) + "\n\n")
         else:
@@ -167,6 +148,7 @@ def main():
             
         f.write(f"<details open markdown=\"1\">\n")
         f.write(f"<summary><h2 id=\"speculators-separated-loose\">Speculators separated (loose)</h2></summary>\n\n")
+        f.write(resources_text)
         if sep_loose_data:
             f.write(generate_markdown_table(sep_loose_data, cols_separated) + "\n\n")
         else:
