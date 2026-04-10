@@ -3,15 +3,13 @@ layout: post
 title: "2026-04-03 Potential Setups"
 date: 2026-04-03
 position_date: "2026-03-31"
-toc:
-  beginning: true
 ---
 
 
 
 
 
-<details open markdown="1">
+<details markdown="1">
 <summary><h2 id="speculators-combined">Speculators combined</h2></summary>
 
 If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
@@ -88,7 +86,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 
 </details>
 
-<details open markdown="1">
+<details markdown="1">
 <summary><h2 id="speculators-separated-strict">Speculators separated (strict)</h2></summary>
 
 If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
@@ -117,7 +115,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 
 </details>
 
-<details open markdown="1">
+<details markdown="1">
 <summary><h2 id="speculators-separated-loose">Speculators separated (loose)</h2></summary>
 
 If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})

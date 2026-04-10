@@ -120,13 +120,11 @@ def main():
         f.write(f"title: \"{date_str} Potential Setups\"\n")
         f.write(f"date: {date_str}\n")
         f.write(f"position_date: \"{position_date}\"\n")
-        f.write(f"toc:\n")
-        f.write(f"  beginning: true\n")
         f.write(f"---\n\n")
         
         resources_text = "If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})\n\n"
         
-        f.write(f"<details open markdown=\"1\">\n")
+        f.write(f"<details markdown=\"1\">\n")
         f.write(f"<summary><h2 id=\"speculators-combined\">Speculators combined</h2></summary>\n\n")
         f.write(resources_text)
         if combined_data:
@@ -136,7 +134,7 @@ def main():
         f.write(resources_text)
         f.write("</details>\n\n")
             
-        f.write(f"<details open markdown=\"1\">\n")
+        f.write(f"<details markdown=\"1\">\n")
         f.write(f"<summary><h2 id=\"speculators-separated-strict\">Speculators separated (strict)</h2></summary>\n\n")
         f.write(resources_text)
         if sep_strict_data:
@@ -146,7 +144,7 @@ def main():
         f.write(resources_text)
         f.write("</details>\n\n")
             
-        f.write(f"<details open markdown=\"1\">\n")
+        f.write(f"<details markdown=\"1\">\n")
         f.write(f"<summary><h2 id=\"speculators-separated-loose\">Speculators separated (loose)</h2></summary>\n\n")
         f.write(resources_text)
         if sep_loose_data:
