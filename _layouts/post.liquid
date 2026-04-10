@@ -69,7 +69,7 @@ layout: default
     const tables = document.querySelectorAll('.screener-table');
     
     tables.forEach(table => {
-      const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.innerText.trim());
+      const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.trim());
       const rows = table.querySelectorAll('tbody tr');
       
       rows.forEach(row => {
