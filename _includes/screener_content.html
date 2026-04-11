@@ -54,6 +54,84 @@
     margin-bottom: 10px;
   }
 
+  /* Info Tooltip Styling */
+  .info-tooltip-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 6px;
+    cursor: help;
+  }
+
+  .info-icon {
+    font-size: 0.85rem;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+  }
+
+  .info-tooltip-wrapper:hover .info-icon,
+  .info-tooltip-wrapper.active .info-icon {
+    opacity: 1;
+  }
+
+  .tooltip-content {
+    visibility: hidden;
+    width: 220px;
+    background-color: var(--global-card-bg-color, #2c2c2c);
+    color: var(--global-text-color, #fff);
+    text-align: left;
+    border-radius: 8px;
+    padding: 10px 12px;
+    position: absolute;
+    z-index: 1000;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border: 1px solid var(--global-divider-color, #444);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Arrow for tooltip */
+  .tooltip-content::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: var(--global-divider-color, #444) transparent transparent transparent;
+  }
+
+  .info-tooltip-wrapper:hover .tooltip-content,
+  .info-tooltip-wrapper.active .tooltip-content {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+  }
+
+  @media (max-width: 768px) {
+    .tooltip-content {
+      left: auto;
+      right: -20px;
+      transform: translateX(0);
+    }
+
+    .tooltip-content::after {
+      left: auto;
+      right: 25px;
+    }
+
+    .info-tooltip-wrapper:hover .tooltip-content,
+    .info-tooltip-wrapper.active .tooltip-content {
+      transform: translateX(0) translateY(-5px);
+    }
+  }
 </style>
 
 <div id="loading" class="loading-overlay">
@@ -97,6 +175,11 @@
       <button class="btn btn-sm btn-outline-primary" onclick="setMode('setups')">Show potential setups</button>
       <input type="checkbox" id="strict_checkbox" onchange="applyFilters()" />
       <label for="strict_checkbox" style="margin-bottom: 0; cursor: pointer;">Strict</label>
+      <div class="info-tooltip-wrapper" id="strict-info">
+        <i class="fa-solid fa-circle-question info-icon"></i>
+        <span class="tooltip-content">Selecting "strict" means only showing assets where Commercial and Speculator
+          positions are at opposite extremes.</span>
+      </div>
     </div>
     <button class="btn btn-sm btn-outline-primary" onclick="setMode('percentchange')" style="display: none">Show %
       changes >= 5%</button>
@@ -184,6 +267,20 @@
       });
 
       document.getElementById("loading").style.display = "none";
+
+      // Setup tooltip tap for mobile
+      const strictInfo = document.getElementById("strict-info");
+      if (strictInfo) {
+        strictInfo.addEventListener("click", function (e) {
+          e.stopPropagation();
+          this.classList.toggle("active");
+        });
+
+        document.addEventListener("click", function () {
+          strictInfo.classList.remove("active");
+        });
+      }
+
       renderTable();
     } catch (error) {
       console.error("Error loading data:", error);
