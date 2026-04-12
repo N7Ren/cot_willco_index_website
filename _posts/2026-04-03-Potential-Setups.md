@@ -3,6 +3,7 @@ layout: post
 title: "2026-04-03 Potential Setups"
 date: 2026-04-03
 position_date: "2026-03-31"
+show_methodology: true
 ---
 
 

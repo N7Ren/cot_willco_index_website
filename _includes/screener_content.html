@@ -132,6 +132,29 @@
       transform: translateX(0) translateY(-5px);
     }
   }
+
+  /* Strict Wrapper for Mobile */
+  .strict-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  @media (max-width: 576px) {
+    .strict-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+    }
+
+    .info-tooltip-wrapper {
+      margin-left: 0 !important;
+    }
+
+    .info-icon {
+      font-size: 0.75rem;
+    }
+  }
 </style>
 
 <div id="loading" class="loading-overlay">
@@ -173,12 +196,16 @@
       <button class="btn btn-sm btn-outline-primary" id="combine-speculators-btn"
         onclick="toggleCombineSpeculators()">Combine Speculators</button>
       <button class="btn btn-sm btn-outline-primary" onclick="setMode('setups')">Show potential setups</button>
-      <input type="checkbox" id="strict_checkbox" onchange="applyFilters()" />
-      <label for="strict_checkbox" style="margin-bottom: 0; cursor: pointer;">Strict</label>
-      <div class="info-tooltip-wrapper" id="strict-info">
-        <i class="fa-solid fa-circle-question info-icon"></i>
-        <span class="tooltip-content">Selecting "strict" means only showing assets where Commercial and Speculator
-          positions are at opposite extremes.</span>
+      <div class="strict-wrapper">
+        <div style="display: flex; align-items: center; gap: 4px;">
+          <input type="checkbox" id="strict_checkbox" onchange="applyFilters()" />
+          <label for="strict_checkbox" style="margin-bottom: 0; cursor: pointer;">Strict</label>
+        </div>
+        <div class="info-tooltip-wrapper" id="strict-info">
+          <i class="fa-solid fa-circle-question info-icon"></i>
+          <span class="tooltip-content">Selecting "strict" means only showing assets where Commercial and Speculator
+            positions are at opposite extremes.</span>
+        </div>
       </div>
     </div>
     <button class="btn btn-sm btn-outline-primary" onclick="setMode('percentchange')" style="display: none">Show %

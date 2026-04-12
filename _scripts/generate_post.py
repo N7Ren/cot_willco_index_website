@@ -120,6 +120,7 @@ def main():
         f.write(f"title: \"{date_str} Potential Setups\"\n")
         f.write(f"date: {date_str}\n")
         f.write(f"position_date: \"{position_date}\"\n")
+        f.write(f"show_methodology: true\n")
         f.write(f"---\n\n")
         
         resources_text = "If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})\n\n"

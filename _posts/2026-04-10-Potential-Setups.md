@@ -3,6 +3,7 @@ layout: post
 title: "2026-04-10 Potential Setups"
 date: 2026-04-10
 position_date: "2026-04-07"
+show_methodology: true
 ---
 
 <details markdown="1">

@@ -34,6 +34,54 @@ layout: default
       <hr>
     {% endif %}
     <div id="markdown-content">
+      {% if page.show_methodology %}
+        <style>
+          .methodology-box {
+            border: 1px solid var(--global-divider-color);
+            border-radius: 6px;
+            padding: 10px 14px;
+            margin-bottom: 24px;
+            color: var(--global-text-color-light);
+            font-size: 0.85rem;
+            line-height: 1.3;
+            background-color: var(--global-bg-color);
+          }
+          .methodology-label {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05rem;
+            margin-bottom: 4px;
+            color: var(--global-theme-color);
+            opacity: 0.8;
+          }
+          .methodology-box div {
+            margin-bottom: 2px;
+          }
+          .methodology-box div:last-child {
+            margin-bottom: 0;
+          }
+          .methodology-box strong {
+            color: var(--global-text-color);
+            font-weight: 600;
+          }
+          @media (max-width: 576px) {
+            .methodology-box {
+              padding: 8px 12px;
+              font-size: 0.8rem;
+              margin-bottom: 16px;
+              line-height: 1.25;
+            }
+          }
+        </style>
+        <div class="methodology-box">
+          <span class="methodology-label">Methodology</span>
+          <div><strong>Combined</strong>: Sums positions for Large & Small Speculators and displays extremes.</div>
+          <div><strong>Strict</strong>: Opposite extremes between Commercials & Speculators (Divergence).</div>
+          <div><strong>Loose</strong>: Any extreme of any market participant (Broader sentiment trends).</div>
+        </div>
+      {% endif %}
       {{ content }}
     </div>
   </article>
