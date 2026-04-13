@@ -82,7 +82,6 @@ If you want to learn more about how to apply this data in your trading see [Reso
 If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
 
 </details>
-
 <details markdown="1">
 <summary><h2 id="speculators-separated-strict">Speculators separated (strict) (6 assets)</h2></summary>
 
@@ -108,7 +107,6 @@ If you want to learn more about how to apply this data in your trading see [Reso
 If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
 
 </details>
-
 <details markdown="1">
 <summary><h2 id="speculators-separated-loose">Speculators separated (loose) (44 assets)</h2></summary>
 

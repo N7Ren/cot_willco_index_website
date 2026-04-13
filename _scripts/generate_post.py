@@ -136,7 +136,7 @@ def main():
         else:
             f.write("No setups found.\n\n")
         f.write(resources_text)
-        f.write("</details>\n\n")
+        f.write("</details>\n")
             
         f.write(f"<details markdown=\"1\">\n")
         f.write(f"<summary><h2 id=\"speculators-separated-strict\">Speculators separated (strict) ({get_unique_asset_count(sep_strict_data)} assets)</h2></summary>\n\n")
@@ -146,7 +146,7 @@ def main():
         else:
             f.write("No setups found.\n\n")
         f.write(resources_text)
-        f.write("</details>\n\n")
+        f.write("</details>\n")
             
         f.write(f"<details markdown=\"1\">\n")
         f.write(f"<summary><h2 id=\"speculators-separated-loose\">Speculators separated (loose) ({get_unique_asset_count(sep_loose_data)} assets)</h2></summary>\n\n")
@@ -156,7 +156,7 @@ def main():
         else:
             f.write("No setups found.\n\n")
         f.write(resources_text)
-        f.write("</details>\n\n")
+        f.write("</details>\n")
             
     print(f"Generated {post_filename}")
 
