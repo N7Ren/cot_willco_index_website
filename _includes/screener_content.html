@@ -428,7 +428,7 @@
 
     // 2. Secondary Filter (Asset Dropdown)
     if (selectedAsset) {
-      filtered = filtered.filter((row) => row.market_and_exchange_names === selectedAsset);
+      filtered = filtered.filter((row) => row.market_and_exchange_names && row.market_and_exchange_names.trim() === selectedAsset.trim());
     }
 
     // 3. Secondary Filter (Year Dropdown)

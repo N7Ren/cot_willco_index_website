@@ -12,6 +12,8 @@ def load_markets():
     try:
         df = pd.read_csv(csv_path, dtype=str)
         df.columns = df.columns.str.strip()
+        for col in df.columns:
+            df[col] = df[col].str.strip()
         return df
     except Exception as e:
         print(f"Error loading markets.csv: {e}")
