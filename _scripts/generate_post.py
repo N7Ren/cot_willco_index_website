@@ -12,6 +12,9 @@ def get_color_span(val, val_type):
             return f'{int(round(val))}'
     return str(val)
 
+def get_unique_asset_count(data):
+    return len(set(d.get('market_and_exchange_names') for d in data))
+
 def generate_markdown_table(data, cols):
     # cols is a list of dicts: {'id': '', 'label': '', 'type': ''}
     header_labels = [c['label'] for c in cols]
@@ -126,7 +129,7 @@ def main():
         resources_text = "If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})\n\n"
         
         f.write(f"<details markdown=\"1\">\n")
-        f.write(f"<summary><h2 id=\"speculators-combined\">Speculators combined</h2></summary>\n\n")
+        f.write(f"<summary><h2 id=\"speculators-combined\">Speculators combined ({get_unique_asset_count(combined_data)} assets)</h2></summary>\n\n")
         f.write(resources_text)
         if combined_data:
             f.write(generate_markdown_table(combined_data, cols_combined) + "\n\n")
@@ -136,7 +139,7 @@ def main():
         f.write("</details>\n\n")
             
         f.write(f"<details markdown=\"1\">\n")
-        f.write(f"<summary><h2 id=\"speculators-separated-strict\">Speculators separated (strict)</h2></summary>\n\n")
+        f.write(f"<summary><h2 id=\"speculators-separated-strict\">Speculators separated (strict) ({get_unique_asset_count(sep_strict_data)} assets)</h2></summary>\n\n")
         f.write(resources_text)
         if sep_strict_data:
             f.write(generate_markdown_table(sep_strict_data, cols_separated) + "\n\n")
@@ -146,7 +149,7 @@ def main():
         f.write("</details>\n\n")
             
         f.write(f"<details markdown=\"1\">\n")
-        f.write(f"<summary><h2 id=\"speculators-separated-loose\">Speculators separated (loose)</h2></summary>\n\n")
+        f.write(f"<summary><h2 id=\"speculators-separated-loose\">Speculators separated (loose) ({get_unique_asset_count(sep_loose_data)} assets)</h2></summary>\n\n")
         f.write(resources_text)
         if sep_loose_data:
             f.write(generate_markdown_table(sep_loose_data, cols_separated) + "\n\n")
