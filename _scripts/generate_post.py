@@ -1,6 +1,7 @@
 import json
 import os
 from datetime import datetime, timezone
+from collections import defaultdict
 
 def get_color_span(val, val_type):
     if val_type == "index":
@@ -14,6 +15,10 @@ def get_color_span(val, val_type):
 
 def get_unique_asset_count(data):
     return len(set(d.get('market_and_exchange_names') for d in data))
+
+def format_years(val):
+    val_float = float(val)
+    return str(int(val_float) if val_float.is_integer() else val)
 
 def generate_markdown_table(data, cols):
     # cols is a list of dicts: {'id': '', 'label': '', 'type': ''}
@@ -43,6 +48,53 @@ def generate_markdown_table(data, cols):
         
     return "\n".join([header_line, sep_line] + rows) + "\n{: .table .table-sm .table-hover .screener-table .w-100 }"
 
+
+def generate_grouped_html(data, section_type):
+    # section_type can be 'combined' or 'separated'
+    # Group data by asset
+    grouped = defaultdict(list)
+    for row in data:
+        name = row['market_and_exchange_names']
+        grouped[name].append(row)
+        
+    html_parts = []
+    
+    for asset, rows in sorted(grouped.items()):
+        html_parts.append('<div class="blog-asset-card">')
+        html_parts.append(f'<div class="asset-card-header">{asset}</div>')
+        html_parts.append('<div class="asset-table-wrapper">')
+        html_parts.append('<table class="blog-compact-table">')
+        
+        if section_type == 'combined':
+            html_parts.append('<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>')
+            html_parts.append('<tbody>')
+            for row in rows:
+                yrs = format_years(row.get('lookback_(y)', 0))
+                comm = get_color_span(row['willco_commercials_index'], 'index')
+                spec_val = 100 - row['willco_commercials_index']
+                spec = get_color_span(spec_val, 'index')
+                
+                html_parts.append(f'<tr><td>{yrs}</td><td>{comm}</td><td>{spec}</td></tr>')
+            html_parts.append('</tbody>')
+            
+        else:
+            html_parts.append('<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>')
+            html_parts.append('<tbody>')
+            for row in rows:
+                yrs = format_years(row.get('lookback_(y)', 0))
+                comm = get_color_span(row['willco_commercials_index'], 'index')
+                large = get_color_span(row['willco_large_specs_index'], 'index')
+                small = get_color_span(row['willco_small_specs_index'], 'index')
+                
+                html_parts.append(f'<tr><td>{yrs}</td><td>{comm}</td><td>L: {large} / S: {small}</td></tr>')
+            html_parts.append('</tbody>')
+
+        html_parts.append('</table>')
+        html_parts.append('</div>')
+        html_parts.append('</div>')
+        
+    return "\n".join(html_parts)
+
 def main():
     data_path = os.path.join(os.path.dirname(__file__), '../_data/data.json')
     if not os.path.exists(data_path):
@@ -69,7 +121,7 @@ def main():
     # Sort by market alphabetically
     filtered.sort(key=lambda x: x.get('market_and_exchange_names', ''))
     
-    # 1. Combined Speculators
+    # Combined
     combined_data = []
     for row in filtered:
         combined = 100 - row['willco_commercials_index']
@@ -85,7 +137,7 @@ def main():
         {"id": "combined_speculators", "label": "Speculators", "type": "index"}
     ]
     
-    # 2. Separated Strict
+    # Separated Strict
     sep_strict_data = []
     for row in filtered:
         c = row['willco_commercials_index']
@@ -102,8 +154,8 @@ def main():
         {"id": "willco_large_specs_index", "label": "Large Speculators", "type": "index"},
         {"id": "willco_small_specs_index", "label": "Small Speculators", "type": "index"}
     ]
-    
-    # 3. Separated Loose
+            
+    # Separated Loose
     sep_loose_data = []
     for row in filtered:
         c = row['willco_commercials_index']
@@ -128,35 +180,27 @@ def main():
         
         resources_text = "If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})\n\n"
         
-        f.write(f"<details markdown=\"1\">\n")
-        f.write(f"<summary><h2 id=\"speculators-combined\">Speculators combined ({get_unique_asset_count(combined_data)} assets)</h2></summary>\n\n")
-        f.write(resources_text)
-        if combined_data:
-            f.write(generate_markdown_table(combined_data, cols_combined) + "\n\n")
-        else:
-            f.write("No setups found.\n\n")
-        f.write(resources_text)
-        f.write("</details>\n")
+        def write_section(title, section_data, section_type, cols):
+            f.write(f"<details markdown=\"1\">\n")
+            f.write(f"<summary><h2 id=\"speculators-{section_type}\">{title} ({get_unique_asset_count(section_data)} assets)</h2></summary>\n\n")
+            f.write(resources_text)
+            if section_data:
+                # Desktop view
+                f.write("<div class=\"d-none d-md-block\" markdown=\"1\">\n\n")
+                f.write(generate_markdown_table(section_data, cols) + "\n\n")
+                f.write("</div>\n")
+                # Mobile view
+                f.write("<div class=\"d-block d-md-none\">\n\n")
+                f.write(generate_grouped_html(section_data, 'combined' if 'combined' in title else 'separated') + "\n\n")
+                f.write("</div>\n\n")
+            else:
+                f.write("No setups found.\n\n")
+            f.write(resources_text)
+            f.write("</details>\n")
             
-        f.write(f"<details markdown=\"1\">\n")
-        f.write(f"<summary><h2 id=\"speculators-separated-strict\">Speculators separated (strict) ({get_unique_asset_count(sep_strict_data)} assets)</h2></summary>\n\n")
-        f.write(resources_text)
-        if sep_strict_data:
-            f.write(generate_markdown_table(sep_strict_data, cols_separated) + "\n\n")
-        else:
-            f.write("No setups found.\n\n")
-        f.write(resources_text)
-        f.write("</details>\n")
-            
-        f.write(f"<details markdown=\"1\">\n")
-        f.write(f"<summary><h2 id=\"speculators-separated-loose\">Speculators separated (loose) ({get_unique_asset_count(sep_loose_data)} assets)</h2></summary>\n\n")
-        f.write(resources_text)
-        if sep_loose_data:
-            f.write(generate_markdown_table(sep_loose_data, cols_separated) + "\n\n")
-        else:
-            f.write("No setups found.\n\n")
-        f.write(resources_text)
-        f.write("</details>\n")
+        write_section("Speculators combined", combined_data, "combined", cols_combined)
+        write_section("Speculators separated (strict)", sep_strict_data, "separated-strict", cols_separated)
+        write_section("Speculators separated (loose)", sep_loose_data, "separated-loose", cols_separated)
             
     print(f"Generated {post_filename}")
 

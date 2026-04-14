@@ -11,6 +11,8 @@ show_methodology: true
 
 If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
 
+<div class="d-none d-md-block" markdown="1">
+
 | Market | Years | Commercials | Speculators |
 |:---:|:---:|:---:|:---:|
 | AUSTRALIAN DOLLAR | 0.5 | <span class="text-red">0</span> | <span class="text-green">100</span> |
@@ -106,6 +108,353 @@ If you want to learn more about how to apply this data in your trading see [Reso
 | WTI-PHYSICAL | 5 | <span class="text-green">98</span> | <span class="text-red">2</span> |
 {: .table .table-sm .table-hover .screener-table .w-100 }
 
+</div>
+<div class="d-block d-md-none">
+
+<div class="blog-asset-card">
+<div class="asset-card-header">AUSTRALIAN DOLLAR</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
+<tr><td>1</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">BBG COMMODITY</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
+<tr><td>1</td><td><span class="text-red">1</span></td><td><span class="text-green">99</span></td></tr>
+<tr><td>3</td><td><span class="text-red">5</span></td><td><span class="text-green">95</span></td></tr>
+<tr><td>4</td><td><span class="text-red">4</span></td><td><span class="text-green">96</span></td></tr>
+<tr><td>5</td><td><span class="text-red">3</span></td><td><span class="text-green">97</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">BRAZILIAN REAL</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">93</span></td><td><span class="text-red">7</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">CANADIAN DOLLAR</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">10</span></td><td><span class="text-green">90</span></td></tr>
+<tr><td>1</td><td><span class="text-red">10</span></td><td><span class="text-green">90</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">CANOLA</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">98</span></td><td><span class="text-red">2</span></td></tr>
+<tr><td>1</td><td><span class="text-green">98</span></td><td><span class="text-red">2</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">COCOA</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
+<tr><td>1</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
+<tr><td>2</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
+<tr><td>3</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
+<tr><td>4</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
+<tr><td>5</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">COTTON NO. 2</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
+<tr><td>1</td><td><span class="text-red">8</span></td><td><span class="text-green">92</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">EURO FX/BRITISH POUND XRATE</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">10</span></td><td><span class="text-green">90</span></td></tr>
+<tr><td>1</td><td><span class="text-red">9</span></td><td><span class="text-green">91</span></td></tr>
+<tr><td>2</td><td><span class="text-red">4</span></td><td><span class="text-green">96</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">EURO FX/JAPANESE YEN XRATE</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">10</span></td><td><span class="text-green">90</span></td></tr>
+<tr><td>1</td><td><span class="text-red">10</span></td><td><span class="text-green">90</span></td></tr>
+<tr><td>2</td><td><span class="text-red">9</span></td><td><span class="text-green">91</span></td></tr>
+<tr><td>3</td><td><span class="text-red">9</span></td><td><span class="text-green">91</span></td></tr>
+<tr><td>4</td><td><span class="text-red">9</span></td><td><span class="text-green">91</span></td></tr>
+<tr><td>5</td><td><span class="text-red">9</span></td><td><span class="text-green">91</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">FEEDER CATTLE</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">91</span></td><td><span class="text-red">9</span></td></tr>
+<tr><td>1</td><td><span class="text-green">91</span></td><td><span class="text-red">9</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">JAPANESE YEN</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
+<tr><td>1</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">LUMBER</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
+<tr><td>1</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
+<tr><td>2</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
+<tr><td>3</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
+<tr><td>4</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
+<tr><td>5</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">MSCI EAFE</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
+<tr><td>1</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
+<tr><td>2</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
+<tr><td>3</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
+<tr><td>4</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
+<tr><td>5</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">NAT GAS NYME</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
+<tr><td>1</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
+<tr><td>2</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">NIKKEI STOCK AVERAGE YEN DENOM</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
+<tr><td>1</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">NY HARBOR ULSD</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">NZ DOLLAR</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
+<tr><td>1</td><td><span class="text-green">95</span></td><td><span class="text-red">5</span></td></tr>
+<tr><td>2</td><td><span class="text-green">96</span></td><td><span class="text-red">4</span></td></tr>
+<tr><td>3</td><td><span class="text-green">96</span></td><td><span class="text-red">4</span></td></tr>
+<tr><td>4</td><td><span class="text-green">96</span></td><td><span class="text-red">4</span></td></tr>
+<tr><td>5</td><td><span class="text-green">96</span></td><td><span class="text-red">4</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">PALLADIUM</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
+<tr><td>1</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
+<tr><td>2</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
+<tr><td>3</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
+<tr><td>4</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">ROUGH RICE</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>2</td><td><span class="text-green">91</span></td><td><span class="text-red">9</span></td></tr>
+<tr><td>3</td><td><span class="text-green">91</span></td><td><span class="text-red">9</span></td></tr>
+<tr><td>4</td><td><span class="text-green">91</span></td><td><span class="text-red">9</span></td></tr>
+<tr><td>5</td><td><span class="text-green">91</span></td><td><span class="text-red">9</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">RUSSELL E-MINI</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
+<tr><td>1</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
+<tr><td>2</td><td><span class="text-red">8</span></td><td><span class="text-green">92</span></td></tr>
+<tr><td>3</td><td><span class="text-red">8</span></td><td><span class="text-green">92</span></td></tr>
+<tr><td>4</td><td><span class="text-red">8</span></td><td><span class="text-green">92</span></td></tr>
+<tr><td>5</td><td><span class="text-red">8</span></td><td><span class="text-green">92</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">SUGAR NO. 11</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>2</td><td><span class="text-green">90</span></td><td><span class="text-red">10</span></td></tr>
+<tr><td>3</td><td><span class="text-green">93</span></td><td><span class="text-red">7</span></td></tr>
+<tr><td>4</td><td><span class="text-green">93</span></td><td><span class="text-red">7</span></td></tr>
+<tr><td>5</td><td><span class="text-green">93</span></td><td><span class="text-red">7</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">USD INDEX</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">4</span></td><td><span class="text-green">96</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">UST BOND</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>2</td><td><span class="text-red">9</span></td><td><span class="text-green">91</span></td></tr>
+<tr><td>3</td><td><span class="text-red">5</span></td><td><span class="text-green">95</span></td></tr>
+<tr><td>4</td><td><span class="text-red">5</span></td><td><span class="text-green">95</span></td></tr>
+<tr><td>5</td><td><span class="text-red">4</span></td><td><span class="text-green">96</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">VIX FUTURES</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">98</span></td><td><span class="text-red">2</span></td></tr>
+<tr><td>1</td><td><span class="text-green">99</span></td><td><span class="text-red">1</span></td></tr>
+<tr><td>2</td><td><span class="text-green">99</span></td><td><span class="text-red">1</span></td></tr>
+<tr><td>3</td><td><span class="text-green">99</span></td><td><span class="text-red">1</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">WTI-PHYSICAL</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">92</span></td><td><span class="text-red">8</span></td></tr>
+<tr><td>1</td><td><span class="text-green">97</span></td><td><span class="text-red">3</span></td></tr>
+<tr><td>2</td><td><span class="text-green">97</span></td><td><span class="text-red">3</span></td></tr>
+<tr><td>3</td><td><span class="text-green">97</span></td><td><span class="text-red">3</span></td></tr>
+<tr><td>4</td><td><span class="text-green">97</span></td><td><span class="text-red">3</span></td></tr>
+<tr><td>5</td><td><span class="text-green">98</span></td><td><span class="text-red">2</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
 
 </details>
@@ -113,6 +462,8 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <summary><h2 id="speculators-separated-strict">Speculators separated (strict) (5 assets)</h2></summary>
 
 If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
+
+<div class="d-none d-md-block" markdown="1">
 
 | Market | Years | Commercials | Large Speculators | Small Speculators |
 |:---:|:---:|:---:|:---:|:---:|
@@ -132,6 +483,76 @@ If you want to learn more about how to apply this data in your trading see [Reso
 | SUGAR NO. 11 | 5 | <span class="text-green">93</span> | <span class="text-red">8</span> | <span class="text-red">8</span> |
 {: .table .table-sm .table-hover .screener-table .w-100 }
 
+</div>
+<div class="d-block d-md-none">
+
+<div class="blog-asset-card">
+<div class="asset-card-header">AUSTRALIAN DOLLAR</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">98</span> / S: <span class="text-green">99</span></td></tr>
+<tr><td>1</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">98</span> / S: <span class="text-green">100</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">BBG COMMODITY</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: <span class="text-green">100</span></td></tr>
+<tr><td>1</td><td><span class="text-red">1</span></td><td>L: <span class="text-green">94</span> / S: <span class="text-green">100</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">COCOA</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">7</span></td></tr>
+<tr><td>1</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">6</span></td></tr>
+<tr><td>2</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">6</span></td></tr>
+<tr><td>3</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">6</span></td></tr>
+<tr><td>4</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">6</span></td></tr>
+<tr><td>5</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">6</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">JAPANESE YEN</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>1</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">10</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">SUGAR NO. 11</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>3</td><td><span class="text-green">93</span></td><td>L: <span class="text-red">8</span> / S: <span class="text-red">9</span></td></tr>
+<tr><td>4</td><td><span class="text-green">93</span></td><td>L: <span class="text-red">8</span> / S: <span class="text-red">8</span></td></tr>
+<tr><td>5</td><td><span class="text-green">93</span></td><td>L: <span class="text-red">8</span> / S: <span class="text-red">8</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
 
 </details>
@@ -139,6 +560,8 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <summary><h2 id="speculators-separated-loose">Speculators separated (loose) (42 assets)</h2></summary>
 
 If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
+
+<div class="d-none d-md-block" markdown="1">
 
 | Market | Years | Commercials | Large Speculators | Small Speculators |
 |:---:|:---:|:---:|:---:|:---:|
@@ -281,6 +704,570 @@ If you want to learn more about how to apply this data in your trading see [Reso
 | WTI-PHYSICAL | 4 | <span class="text-green">97</span> | <span class="text-red">5</span> | 14 |
 | WTI-PHYSICAL | 5 | <span class="text-green">98</span> | <span class="text-red">4</span> | 14 |
 {: .table .table-sm .table-hover .screener-table .w-100 }
+
+</div>
+<div class="d-block d-md-none">
+
+<div class="blog-asset-card">
+<div class="asset-card-header">AUSTRALIAN DOLLAR</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">98</span> / S: <span class="text-green">99</span></td></tr>
+<tr><td>1</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">98</span> / S: <span class="text-green">100</span></td></tr>
+<tr><td>2</td><td>29</td><td>L: 63 / S: <span class="text-green">100</span></td></tr>
+<tr><td>3</td><td>29</td><td>L: 63 / S: <span class="text-green">100</span></td></tr>
+<tr><td>4</td><td>29</td><td>L: 63 / S: <span class="text-green">98</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">BBG COMMODITY</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: <span class="text-green">100</span></td></tr>
+<tr><td>1</td><td><span class="text-red">1</span></td><td>L: <span class="text-green">94</span> / S: <span class="text-green">100</span></td></tr>
+<tr><td>2</td><td>18</td><td>L: 78 / S: <span class="text-green">100</span></td></tr>
+<tr><td>3</td><td><span class="text-red">5</span></td><td>L: <span class="text-green">94</span> / S: 23</td></tr>
+<tr><td>4</td><td><span class="text-red">4</span></td><td>L: <span class="text-green">95</span> / S: 59</td></tr>
+<tr><td>5</td><td><span class="text-red">3</span></td><td>L: <span class="text-green">96</span> / S: 52</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">BRAZILIAN REAL</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">93</span></td><td>L: <span class="text-red">4</span> / S: <span class="text-green">96</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">BRENT LAST DAY</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td>75</td><td>L: 17 / S: <span class="text-green">96</span></td></tr>
+<tr><td>1</td><td>85</td><td>L: 12 / S: <span class="text-green">97</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">CANADIAN DOLLAR</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">10</span></td><td>L: <span class="text-green">98</span> / S: 54</td></tr>
+<tr><td>1</td><td><span class="text-red">10</span></td><td>L: <span class="text-green">98</span> / S: 54</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">CANOLA</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">98</span></td><td>L: <span class="text-red">3</span> / S: 48</td></tr>
+<tr><td>1</td><td><span class="text-green">98</span></td><td>L: <span class="text-red">2</span> / S: 30</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">COCOA</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">7</span></td></tr>
+<tr><td>1</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">6</span></td></tr>
+<tr><td>2</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">6</span></td></tr>
+<tr><td>3</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">6</span></td></tr>
+<tr><td>4</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">6</span></td></tr>
+<tr><td>5</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">6</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">COPPER- #1</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td>36</td><td>L: 63 / S: <span class="text-green">94</span></td></tr>
+<tr><td>1</td><td>22</td><td>L: 72 / S: <span class="text-green">95</span></td></tr>
+<tr><td>2</td><td>12</td><td>L: 86 / S: <span class="text-green">95</span></td></tr>
+<tr><td>3</td><td>11</td><td>L: 87 / S: <span class="text-green">95</span></td></tr>
+<tr><td>4</td><td>11</td><td>L: 87 / S: <span class="text-green">96</span></td></tr>
+<tr><td>5</td><td>14</td><td>L: 82 / S: <span class="text-green">96</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">CORN</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td>51</td><td>L: 42 / S: <span class="text-green">100</span></td></tr>
+<tr><td>1</td><td>72</td><td>L: 25 / S: <span class="text-green">97</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">COTTON NO. 2</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 84</td></tr>
+<tr><td>1</td><td><span class="text-red">8</span></td><td>L: 79 / S: 77</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">E-MINI S&P 500</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td>21</td><td>L: 61 / S: <span class="text-green">100</span></td></tr>
+<tr><td>1</td><td>56</td><td>L: 25 / S: <span class="text-green">100</span></td></tr>
+<tr><td>2</td><td>56</td><td>L: 24 / S: <span class="text-green">100</span></td></tr>
+<tr><td>3</td><td>35</td><td>L: 48 / S: <span class="text-green">100</span></td></tr>
+<tr><td>4</td><td>37</td><td>L: 40 / S: <span class="text-green">100</span></td></tr>
+<tr><td>5</td><td>37</td><td>L: 40 / S: <span class="text-green">100</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">ETHANOL</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td>28</td><td>L: 76 / S: <span class="text-red">0</span></td></tr>
+<tr><td>1</td><td>24</td><td>L: 79 / S: <span class="text-red">0</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">ETHER CASH SETTLED</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>2</td><td>11</td><td>L: <span class="text-green">92</span> / S: 20</td></tr>
+<tr><td>5</td><td>45</td><td>L: 67 / S: <span class="text-red">8</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">EURO FX/BRITISH POUND XRATE</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">10</span></td><td>L: <span class="text-green">100</span> / S: <span class="text-red">6</span></td></tr>
+<tr><td>1</td><td><span class="text-red">9</span></td><td>L: <span class="text-green">100</span> / S: 51</td></tr>
+<tr><td>2</td><td><span class="text-red">4</span></td><td>L: <span class="text-green">100</span> / S: 79</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">EURO FX/JAPANESE YEN XRATE</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">10</span></td><td>L: 44 / S: <span class="text-green">100</span></td></tr>
+<tr><td>1</td><td><span class="text-red">10</span></td><td>L: 44 / S: <span class="text-green">100</span></td></tr>
+<tr><td>2</td><td><span class="text-red">9</span></td><td>L: 64 / S: <span class="text-green">100</span></td></tr>
+<tr><td>3</td><td><span class="text-red">9</span></td><td>L: 64 / S: <span class="text-green">97</span></td></tr>
+<tr><td>4</td><td><span class="text-red">9</span></td><td>L: 64 / S: <span class="text-green">97</span></td></tr>
+<tr><td>5</td><td><span class="text-red">9</span></td><td>L: 64 / S: <span class="text-green">97</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">FED FUNDS</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td>33</td><td>L: 64 / S: <span class="text-green">100</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">FEEDER CATTLE</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">91</span></td><td>L: <span class="text-red">5</span> / S: 81</td></tr>
+<tr><td>1</td><td><span class="text-green">91</span></td><td>L: <span class="text-red">5</span> / S: 85</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">GOLD</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td>28</td><td>L: 67 / S: <span class="text-green">93</span></td></tr>
+<tr><td>1</td><td>25</td><td>L: 59 / S: <span class="text-green">93</span></td></tr>
+<tr><td>2</td><td>23</td><td>L: 62 / S: <span class="text-green">93</span></td></tr>
+<tr><td>3</td><td>14</td><td>L: 76 / S: <span class="text-green">93</span></td></tr>
+<tr><td>4</td><td>12</td><td>L: 78 / S: <span class="text-green">94</span></td></tr>
+<tr><td>5</td><td>12</td><td>L: 78 / S: <span class="text-green">94</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">JAPANESE YEN</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: 19</td></tr>
+<tr><td>1</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">10</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">LIVE CATTLE</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>1</td><td>51</td><td>L: 38 / S: <span class="text-green">92</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">LUMBER</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: 15</td></tr>
+<tr><td>1</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: 11</td></tr>
+<tr><td>2</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: 34</td></tr>
+<tr><td>3</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: 21</td></tr>
+<tr><td>4</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: 21</td></tr>
+<tr><td>5</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: 21</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">MSCI EAFE</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 84</td></tr>
+<tr><td>1</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 84</td></tr>
+<tr><td>2</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 84</td></tr>
+<tr><td>3</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 68</td></tr>
+<tr><td>4</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 74</td></tr>
+<tr><td>5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">98</span> / S: 74</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">MSCI EM INDEX</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td>71</td><td>L: 39 / S: <span class="text-red">0</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">NAT GAS NYME</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: 40</td></tr>
+<tr><td>1</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: 42</td></tr>
+<tr><td>2</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: 35</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">NIKKEI STOCK AVERAGE YEN DENOM</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: 64 / S: 87</td></tr>
+<tr><td>1</td><td><span class="text-red">0</span></td><td>L: 68 / S: 87</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">NY HARBOR ULSD</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">2</span> / S: 17</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">NZ DOLLAR</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: 52</td></tr>
+<tr><td>1</td><td><span class="text-green">95</span></td><td>L: <span class="text-red">3</span> / S: 35</td></tr>
+<tr><td>2</td><td><span class="text-green">96</span></td><td>L: <span class="text-red">2</span> / S: 36</td></tr>
+<tr><td>3</td><td><span class="text-green">96</span></td><td>L: <span class="text-red">2</span> / S: 50</td></tr>
+<tr><td>4</td><td><span class="text-green">96</span></td><td>L: <span class="text-red">2</span> / S: 50</td></tr>
+<tr><td>5</td><td><span class="text-green">96</span></td><td>L: <span class="text-red">2</span> / S: 47</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">OATS</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td>67</td><td>L: 40 / S: <span class="text-red">5</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">PALLADIUM</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 41</td></tr>
+<tr><td>1</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 65</td></tr>
+<tr><td>2</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 72</td></tr>
+<tr><td>3</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 79</td></tr>
+<tr><td>4</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 77</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">ROUGH RICE</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>2</td><td><span class="text-green">91</span></td><td>L: 13 / S: 43</td></tr>
+<tr><td>3</td><td><span class="text-green">91</span></td><td>L: 13 / S: 43</td></tr>
+<tr><td>4</td><td><span class="text-green">91</span></td><td>L: 13 / S: 37</td></tr>
+<tr><td>5</td><td><span class="text-green">91</span></td><td>L: 13 / S: 37</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">RUSSELL E-MINI</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 66</td></tr>
+<tr><td>1</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 77</td></tr>
+<tr><td>2</td><td><span class="text-red">8</span></td><td>L: <span class="text-green">90</span> / S: 67</td></tr>
+<tr><td>3</td><td><span class="text-red">8</span></td><td>L: <span class="text-green">90</span> / S: 69</td></tr>
+<tr><td>4</td><td><span class="text-red">8</span></td><td>L: <span class="text-green">90</span> / S: 70</td></tr>
+<tr><td>5</td><td><span class="text-red">8</span></td><td>L: <span class="text-green">90</span> / S: 70</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">SILVER</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td>69</td><td>L: 13 / S: <span class="text-green">100</span></td></tr>
+<tr><td>1</td><td>77</td><td>L: <span class="text-red">10</span> / S: <span class="text-green">100</span></td></tr>
+<tr><td>2</td><td>52</td><td>L: 38 / S: <span class="text-green">97</span></td></tr>
+<tr><td>3</td><td>37</td><td>L: 56 / S: <span class="text-green">95</span></td></tr>
+<tr><td>4</td><td>32</td><td>L: 59 / S: <span class="text-green">96</span></td></tr>
+<tr><td>5</td><td>32</td><td>L: 59 / S: <span class="text-green">96</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">SOYBEAN MEAL</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>4</td><td>74</td><td>L: 27 / S: <span class="text-red">9</span></td></tr>
+<tr><td>5</td><td>74</td><td>L: 27 / S: <span class="text-red">9</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">SOYBEANS</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td>63</td><td>L: 38 / S: <span class="text-red">7</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">SUGAR NO. 11</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>2</td><td><span class="text-green">90</span></td><td>L: 11 / S: <span class="text-red">10</span></td></tr>
+<tr><td>3</td><td><span class="text-green">93</span></td><td>L: <span class="text-red">8</span> / S: <span class="text-red">9</span></td></tr>
+<tr><td>4</td><td><span class="text-green">93</span></td><td>L: <span class="text-red">8</span> / S: <span class="text-red">8</span></td></tr>
+<tr><td>5</td><td><span class="text-green">93</span></td><td>L: <span class="text-red">8</span> / S: <span class="text-red">8</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">SWISS FRANC</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>5</td><td>86</td><td>L: <span class="text-red">6</span> / S: 56</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">USD INDEX</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-red">4</span></td><td>L: <span class="text-green">92</span> / S: 34</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">UST 10Y NOTE</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td>60</td><td>L: 54 / S: <span class="text-red">0</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">UST 5Y NOTE</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td>30</td><td>L: 85 / S: <span class="text-red">0</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">UST BOND</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td>11</td><td>L: <span class="text-green">100</span> / S: 40</td></tr>
+<tr><td>2</td><td><span class="text-red">9</span></td><td>L: 85 / S: 61</td></tr>
+<tr><td>3</td><td><span class="text-red">5</span></td><td>L: <span class="text-green">91</span> / S: 63</td></tr>
+<tr><td>4</td><td><span class="text-red">5</span></td><td>L: 84 / S: 75</td></tr>
+<tr><td>5</td><td><span class="text-red">4</span></td><td>L: 84 / S: 81</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">VIX FUTURES</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">98</span></td><td>L: <span class="text-red">8</span> / S: 43</td></tr>
+<tr><td>1</td><td><span class="text-green">99</span></td><td>L: <span class="text-red">4</span> / S: 43</td></tr>
+<tr><td>2</td><td><span class="text-green">99</span></td><td>L: <span class="text-red">4</span> / S: 60</td></tr>
+<tr><td>3</td><td><span class="text-green">99</span></td><td>L: <span class="text-red">4</span> / S: 60</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="blog-asset-card">
+<div class="asset-card-header">WTI-PHYSICAL</div>
+<div class="asset-table-wrapper">
+<table class="blog-compact-table">
+<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<tbody>
+<tr><td>0.5</td><td><span class="text-green">92</span></td><td>L: 15 / S: 14</td></tr>
+<tr><td>1</td><td><span class="text-green">97</span></td><td>L: <span class="text-red">6</span> / S: 20</td></tr>
+<tr><td>2</td><td><span class="text-green">97</span></td><td>L: <span class="text-red">6</span> / S: 14</td></tr>
+<tr><td>3</td><td><span class="text-green">97</span></td><td>L: <span class="text-red">5</span> / S: 14</td></tr>
+<tr><td>4</td><td><span class="text-green">97</span></td><td>L: <span class="text-red">5</span> / S: 14</td></tr>
+<tr><td>5</td><td><span class="text-green">98</span></td><td>L: <span class="text-red">4</span> / S: 14</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
 
 If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
 
