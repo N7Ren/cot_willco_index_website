@@ -3,14 +3,14 @@ import os
 from datetime import datetime, timezone
 from collections import defaultdict
 
-def get_color_span(val, val_type):
+def get_color_span(val, val_type, prefix=""):
     if val_type == "index":
         if val <= 10:
-            return f'<span class="text-red">{int(round(val))}</span>'
+            return f'<span class="text-red">{prefix}{int(round(val))}</span>'
         elif val >= 90:
-            return f'<span class="text-green">{int(round(val))}</span>'
+            return f'<span class="text-green">{prefix}{int(round(val))}</span>'
         else:
-            return f'{int(round(val))}'
+            return f'{prefix}{int(round(val))}'
     return str(val)
 
 def get_unique_asset_count(data):
@@ -83,10 +83,10 @@ def generate_grouped_html(data, section_type):
             for row in rows:
                 yrs = format_years(row.get('lookback_(y)', 0))
                 comm = get_color_span(row['willco_commercials_index'], 'index')
-                large = get_color_span(row['willco_large_specs_index'], 'index')
-                small = get_color_span(row['willco_small_specs_index'], 'index')
+                large = get_color_span(row['willco_large_specs_index'], 'index', prefix="L: ")
+                small = get_color_span(row['willco_small_specs_index'], 'index', prefix="S: ")
                 
-                html_parts.append(f'<tr><td>{yrs}</td><td>{comm}</td><td>L: {large} / S: {small}</td></tr>')
+                html_parts.append(f'<tr><td>{yrs}</td><td>{comm}</td><td>{large} / {small}</td></tr>')
             html_parts.append('</tbody>')
 
         html_parts.append('</table>')

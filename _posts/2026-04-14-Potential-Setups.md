@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "2026-04-10 Potential Setups"
-date: 2026-04-10
+title: "2026-04-14 Potential Setups"
+date: 2026-04-14
 position_date: "2026-04-07"
 show_methodology: true
 ---
@@ -1220,4 +1220,3 @@ If you want to learn more about how to apply this data in your trading see [Reso
 If you want to learn more about how to apply this data in your trading see [Resources]({{ '/resources/' | relative_url }})
 
 </details>
-

@@ -367,8 +367,8 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: <span class="text-green">100</span></td></tr>
-<tr><td>1</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: <span class="text-green">100</span></td></tr>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td><span class="text-green">L: 100</span> / <span class="text-green">S: 100</span></td></tr>
+<tr><td>1</td><td><span class="text-red">0</span></td><td><span class="text-green">L: 100</span> / <span class="text-green">S: 100</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -379,9 +379,9 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">2</span></td></tr>
-<tr><td>1</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">2</span></td></tr>
-<tr><td>2</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">2</span></td></tr>
+<tr><td>0.5</td><td><span class="text-green">100</span></td><td><span class="text-red">L: 0</span> / <span class="text-red">S: 2</span></td></tr>
+<tr><td>1</td><td><span class="text-green">100</span></td><td><span class="text-red">L: 0</span> / <span class="text-red">S: 2</span></td></tr>
+<tr><td>2</td><td><span class="text-green">100</span></td><td><span class="text-red">L: 0</span> / <span class="text-red">S: 2</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -392,7 +392,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td><span class="text-red">4</span></td><td>L: <span class="text-green">95</span> / S: <span class="text-green">91</span></td></tr>
+<tr><td>0.5</td><td><span class="text-red">4</span></td><td><span class="text-green">L: 95</span> / <span class="text-green">S: 91</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -403,11 +403,11 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>1</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">6</span> / S: <span class="text-red">0</span></td></tr>
-<tr><td>2</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">4</span> / S: <span class="text-red">0</span></td></tr>
-<tr><td>3</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">3</span> / S: <span class="text-red">0</span></td></tr>
-<tr><td>4</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">3</span> / S: <span class="text-red">0</span></td></tr>
-<tr><td>5</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">3</span> / S: <span class="text-red">0</span></td></tr>
+<tr><td>1</td><td><span class="text-green">100</span></td><td><span class="text-red">L: 6</span> / <span class="text-red">S: 0</span></td></tr>
+<tr><td>2</td><td><span class="text-green">100</span></td><td><span class="text-red">L: 4</span> / <span class="text-red">S: 0</span></td></tr>
+<tr><td>3</td><td><span class="text-green">100</span></td><td><span class="text-red">L: 3</span> / <span class="text-red">S: 0</span></td></tr>
+<tr><td>4</td><td><span class="text-green">100</span></td><td><span class="text-red">L: 3</span> / <span class="text-red">S: 0</span></td></tr>
+<tr><td>5</td><td><span class="text-green">100</span></td><td><span class="text-red">L: 3</span> / <span class="text-red">S: 0</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -550,12 +550,12 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 78</td></tr>
-<tr><td>1</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 84</td></tr>
-<tr><td>2</td><td><span class="text-red">7</span></td><td>L: <span class="text-green">90</span> / S: 87</td></tr>
-<tr><td>3</td><td><span class="text-red">7</span></td><td>L: <span class="text-green">90</span> / S: 87</td></tr>
-<tr><td>4</td><td><span class="text-red">7</span></td><td>L: <span class="text-green">90</span> / S: 87</td></tr>
-<tr><td>5</td><td><span class="text-red">7</span></td><td>L: <span class="text-green">90</span> / S: 81</td></tr>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td><span class="text-green">L: 100</span> / S: 78</td></tr>
+<tr><td>1</td><td><span class="text-red">0</span></td><td><span class="text-green">L: 100</span> / S: 84</td></tr>
+<tr><td>2</td><td><span class="text-red">7</span></td><td><span class="text-green">L: 90</span> / S: 87</td></tr>
+<tr><td>3</td><td><span class="text-red">7</span></td><td><span class="text-green">L: 90</span> / S: 87</td></tr>
+<tr><td>4</td><td><span class="text-red">7</span></td><td><span class="text-green">L: 90</span> / S: 87</td></tr>
+<tr><td>5</td><td><span class="text-red">7</span></td><td><span class="text-green">L: 90</span> / S: 81</td></tr>
 </tbody>
 </table>
 </div>
@@ -566,8 +566,8 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>4</td><td><span class="text-red">7</span></td><td>L: <span class="text-green">92</span> / S: 57</td></tr>
-<tr><td>5</td><td><span class="text-red">5</span></td><td>L: <span class="text-green">94</span> / S: 51</td></tr>
+<tr><td>4</td><td><span class="text-red">7</span></td><td><span class="text-green">L: 92</span> / S: 57</td></tr>
+<tr><td>5</td><td><span class="text-red">5</span></td><td><span class="text-green">L: 94</span> / S: 51</td></tr>
 </tbody>
 </table>
 </div>
@@ -578,7 +578,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 14</td></tr>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td><span class="text-green">L: 100</span> / S: 14</td></tr>
 </tbody>
 </table>
 </div>
@@ -589,7 +589,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td>52</td><td>L: 44 / S: <span class="text-green">100</span></td></tr>
+<tr><td>0.5</td><td>52</td><td>L: 44 / <span class="text-green">S: 100</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -600,10 +600,10 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: <span class="text-green">100</span></td></tr>
-<tr><td>1</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: <span class="text-green">100</span></td></tr>
-<tr><td>2</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 82</td></tr>
-<tr><td>3</td><td>15</td><td>L: <span class="text-green">95</span> / S: 49</td></tr>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td><span class="text-green">L: 100</span> / <span class="text-green">S: 100</span></td></tr>
+<tr><td>1</td><td><span class="text-red">0</span></td><td><span class="text-green">L: 100</span> / <span class="text-green">S: 100</span></td></tr>
+<tr><td>2</td><td><span class="text-red">0</span></td><td><span class="text-green">L: 100</span> / S: 82</td></tr>
+<tr><td>3</td><td>15</td><td><span class="text-green">L: 95</span> / S: 49</td></tr>
 </tbody>
 </table>
 </div>
@@ -614,11 +614,11 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>1</td><td><span class="text-green">91</span></td><td>L: <span class="text-red">8</span> / S: 31</td></tr>
-<tr><td>2</td><td><span class="text-green">92</span></td><td>L: <span class="text-red">7</span> / S: 31</td></tr>
-<tr><td>3</td><td><span class="text-green">92</span></td><td>L: <span class="text-red">7</span> / S: 31</td></tr>
-<tr><td>4</td><td><span class="text-green">92</span></td><td>L: <span class="text-red">7</span> / S: 31</td></tr>
-<tr><td>5</td><td><span class="text-green">92</span></td><td>L: <span class="text-red">7</span> / S: 31</td></tr>
+<tr><td>1</td><td><span class="text-green">91</span></td><td><span class="text-red">L: 8</span> / S: 31</td></tr>
+<tr><td>2</td><td><span class="text-green">92</span></td><td><span class="text-red">L: 7</span> / S: 31</td></tr>
+<tr><td>3</td><td><span class="text-green">92</span></td><td><span class="text-red">L: 7</span> / S: 31</td></tr>
+<tr><td>4</td><td><span class="text-green">92</span></td><td><span class="text-red">L: 7</span> / S: 31</td></tr>
+<tr><td>5</td><td><span class="text-green">92</span></td><td><span class="text-red">L: 7</span> / S: 31</td></tr>
 </tbody>
 </table>
 </div>
@@ -629,9 +629,9 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">2</span></td></tr>
-<tr><td>1</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">2</span></td></tr>
-<tr><td>2</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: <span class="text-red">2</span></td></tr>
+<tr><td>0.5</td><td><span class="text-green">100</span></td><td><span class="text-red">L: 0</span> / <span class="text-red">S: 2</span></td></tr>
+<tr><td>1</td><td><span class="text-green">100</span></td><td><span class="text-red">L: 0</span> / <span class="text-red">S: 2</span></td></tr>
+<tr><td>2</td><td><span class="text-green">100</span></td><td><span class="text-red">L: 0</span> / <span class="text-red">S: 2</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -642,8 +642,8 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>4</td><td>17</td><td>L: 81 / S: <span class="text-green">90</span></td></tr>
-<tr><td>5</td><td>20</td><td>L: 76 / S: <span class="text-green">90</span></td></tr>
+<tr><td>4</td><td>17</td><td>L: 81 / <span class="text-green">S: 90</span></td></tr>
+<tr><td>5</td><td>20</td><td>L: 76 / <span class="text-green">S: 90</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -654,8 +654,8 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td>54</td><td>L: 41 / S: <span class="text-green">94</span></td></tr>
-<tr><td>1</td><td>72</td><td>L: 25 / S: <span class="text-green">94</span></td></tr>
+<tr><td>0.5</td><td>54</td><td>L: 41 / <span class="text-green">S: 94</span></td></tr>
+<tr><td>1</td><td>72</td><td>L: 25 / <span class="text-green">S: 94</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -666,9 +666,9 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>3</td><td>40</td><td>L: 46 / S: <span class="text-green">91</span></td></tr>
-<tr><td>4</td><td>40</td><td>L: 38 / S: <span class="text-green">92</span></td></tr>
-<tr><td>5</td><td>42</td><td>L: 38 / S: <span class="text-green">92</span></td></tr>
+<tr><td>3</td><td>40</td><td>L: 46 / <span class="text-green">S: 91</span></td></tr>
+<tr><td>4</td><td>40</td><td>L: 38 / <span class="text-green">S: 92</span></td></tr>
+<tr><td>5</td><td>42</td><td>L: 38 / <span class="text-green">S: 92</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -679,10 +679,10 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td>36</td><td>L: 71 / S: <span class="text-red">10</span></td></tr>
-<tr><td>2</td><td>12</td><td>L: <span class="text-green">93</span> / S: 16</td></tr>
-<tr><td>4</td><td>45</td><td>L: 59 / S: <span class="text-red">10</span></td></tr>
-<tr><td>5</td><td>45</td><td>L: 67 / S: <span class="text-red">6</span></td></tr>
+<tr><td>0.5</td><td>36</td><td>L: 71 / <span class="text-red">S: 10</span></td></tr>
+<tr><td>2</td><td>12</td><td><span class="text-green">L: 93</span> / S: 16</td></tr>
+<tr><td>4</td><td>45</td><td>L: 59 / <span class="text-red">S: 10</span></td></tr>
+<tr><td>5</td><td>45</td><td>L: 67 / <span class="text-red">S: 6</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -693,9 +693,9 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td><span class="text-red">4</span></td><td>L: <span class="text-green">95</span> / S: <span class="text-green">91</span></td></tr>
-<tr><td>1</td><td><span class="text-red">2</span></td><td>L: <span class="text-green">98</span> / S: 58</td></tr>
-<tr><td>2</td><td><span class="text-red">1</span></td><td>L: <span class="text-green">98</span> / S: 69</td></tr>
+<tr><td>0.5</td><td><span class="text-red">4</span></td><td><span class="text-green">L: 95</span> / <span class="text-green">S: 91</span></td></tr>
+<tr><td>1</td><td><span class="text-red">2</span></td><td><span class="text-green">L: 98</span> / S: 58</td></tr>
+<tr><td>2</td><td><span class="text-red">1</span></td><td><span class="text-green">L: 98</span> / S: 69</td></tr>
 </tbody>
 </table>
 </div>
@@ -706,9 +706,9 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td>11</td><td>L: <span class="text-green">100</span> / S: <span class="text-red">0</span></td></tr>
-<tr><td>1</td><td><span class="text-red">10</span></td><td>L: <span class="text-green">100</span> / S: 40</td></tr>
-<tr><td>2</td><td><span class="text-red">5</span></td><td>L: <span class="text-green">100</span> / S: 76</td></tr>
+<tr><td>0.5</td><td>11</td><td><span class="text-green">L: 100</span> / <span class="text-red">S: 0</span></td></tr>
+<tr><td>1</td><td><span class="text-red">10</span></td><td><span class="text-green">L: 100</span> / S: 40</td></tr>
+<tr><td>2</td><td><span class="text-red">5</span></td><td><span class="text-green">L: 100</span> / S: 76</td></tr>
 </tbody>
 </table>
 </div>
@@ -721,7 +721,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">10</span></td><td>L: 59 / S: 87</td></tr>
 <tr><td>1</td><td><span class="text-red">10</span></td><td>L: 59 / S: 87</td></tr>
-<tr><td>2</td><td><span class="text-red">9</span></td><td>L: 69 / S: <span class="text-green">90</span></td></tr>
+<tr><td>2</td><td><span class="text-red">9</span></td><td>L: 69 / <span class="text-green">S: 90</span></td></tr>
 <tr><td>3</td><td><span class="text-red">9</span></td><td>L: 69 / S: 87</td></tr>
 <tr><td>4</td><td><span class="text-red">9</span></td><td>L: 69 / S: 87</td></tr>
 <tr><td>5</td><td><span class="text-red">9</span></td><td>L: 69 / S: 87</td></tr>
@@ -735,10 +735,10 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td>80</td><td>L: 16 / S: <span class="text-green">100</span></td></tr>
-<tr><td>3</td><td>73</td><td>L: 22 / S: <span class="text-green">91</span></td></tr>
-<tr><td>4</td><td>73</td><td>L: 22 / S: <span class="text-green">91</span></td></tr>
-<tr><td>5</td><td>52</td><td>L: 45 / S: <span class="text-green">91</span></td></tr>
+<tr><td>0.5</td><td>80</td><td>L: 16 / <span class="text-green">S: 100</span></td></tr>
+<tr><td>3</td><td>73</td><td>L: 22 / <span class="text-green">S: 91</span></td></tr>
+<tr><td>4</td><td>73</td><td>L: 22 / <span class="text-green">S: 91</span></td></tr>
+<tr><td>5</td><td>52</td><td>L: 45 / <span class="text-green">S: 91</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -749,7 +749,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>1</td><td>65</td><td>L: 21 / S: <span class="text-green">90</span></td></tr>
+<tr><td>1</td><td>65</td><td>L: 21 / <span class="text-green">S: 90</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -760,7 +760,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td>25</td><td>L: 67 / S: <span class="text-green">100</span></td></tr>
+<tr><td>0.5</td><td>25</td><td>L: 67 / <span class="text-green">S: 100</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -771,12 +771,12 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td>62</td><td>L: 20 / S: <span class="text-green">100</span></td></tr>
-<tr><td>1</td><td>55</td><td>L: 23 / S: <span class="text-green">100</span></td></tr>
-<tr><td>2</td><td>45</td><td>L: 35 / S: <span class="text-green">100</span></td></tr>
-<tr><td>3</td><td>28</td><td>L: 58 / S: <span class="text-green">100</span></td></tr>
-<tr><td>4</td><td>24</td><td>L: 63 / S: <span class="text-green">100</span></td></tr>
-<tr><td>5</td><td>24</td><td>L: 63 / S: <span class="text-green">100</span></td></tr>
+<tr><td>0.5</td><td>62</td><td>L: 20 / <span class="text-green">S: 100</span></td></tr>
+<tr><td>1</td><td>55</td><td>L: 23 / <span class="text-green">S: 100</span></td></tr>
+<tr><td>2</td><td>45</td><td>L: 35 / <span class="text-green">S: 100</span></td></tr>
+<tr><td>3</td><td>28</td><td>L: 58 / <span class="text-green">S: 100</span></td></tr>
+<tr><td>4</td><td>24</td><td>L: 63 / <span class="text-green">S: 100</span></td></tr>
+<tr><td>5</td><td>24</td><td>L: 63 / <span class="text-green">S: 100</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -787,8 +787,8 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td>39</td><td>L: 50 / S: <span class="text-green">91</span></td></tr>
-<tr><td>1</td><td>39</td><td>L: 50 / S: <span class="text-green">93</span></td></tr>
+<tr><td>0.5</td><td>39</td><td>L: 50 / <span class="text-green">S: 91</span></td></tr>
+<tr><td>1</td><td>39</td><td>L: 50 / <span class="text-green">S: 93</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -799,11 +799,11 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>1</td><td><span class="text-red">8</span></td><td>L: <span class="text-green">93</span> / S: 77</td></tr>
-<tr><td>2</td><td><span class="text-red">6</span></td><td>L: <span class="text-green">95</span> / S: 77</td></tr>
-<tr><td>3</td><td><span class="text-red">4</span></td><td>L: <span class="text-green">96</span> / S: 72</td></tr>
-<tr><td>4</td><td><span class="text-red">4</span></td><td>L: <span class="text-green">96</span> / S: 69</td></tr>
-<tr><td>5</td><td><span class="text-red">4</span></td><td>L: <span class="text-green">94</span> / S: 69</td></tr>
+<tr><td>1</td><td><span class="text-red">8</span></td><td><span class="text-green">L: 93</span> / S: 77</td></tr>
+<tr><td>2</td><td><span class="text-red">6</span></td><td><span class="text-green">L: 95</span> / S: 77</td></tr>
+<tr><td>3</td><td><span class="text-red">4</span></td><td><span class="text-green">L: 96</span> / S: 72</td></tr>
+<tr><td>4</td><td><span class="text-red">4</span></td><td><span class="text-green">L: 96</span> / S: 69</td></tr>
+<tr><td>5</td><td><span class="text-red">4</span></td><td><span class="text-green">L: 94</span> / S: 69</td></tr>
 </tbody>
 </table>
 </div>
@@ -814,7 +814,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td>79</td><td>L: <span class="text-red">1</span> / S: 62</td></tr>
+<tr><td>0.5</td><td>79</td><td><span class="text-red">L: 1</span> / S: 62</td></tr>
 </tbody>
 </table>
 </div>
@@ -825,8 +825,8 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: 47 / S: <span class="text-green">100</span></td></tr>
-<tr><td>1</td><td><span class="text-red">0</span></td><td>L: 59 / S: <span class="text-green">100</span></td></tr>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: 47 / <span class="text-green">S: 100</span></td></tr>
+<tr><td>1</td><td><span class="text-red">0</span></td><td>L: 59 / <span class="text-green">S: 100</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -837,11 +837,11 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td>79</td><td>L: 19 / S: <span class="text-green">100</span></td></tr>
-<tr><td>2</td><td>88</td><td>L: <span class="text-red">10</span> / S: 46</td></tr>
-<tr><td>3</td><td>88</td><td>L: <span class="text-red">10</span> / S: 52</td></tr>
-<tr><td>4</td><td>88</td><td>L: <span class="text-red">10</span> / S: 53</td></tr>
-<tr><td>5</td><td>88</td><td>L: <span class="text-red">10</span> / S: 50</td></tr>
+<tr><td>0.5</td><td>79</td><td>L: 19 / <span class="text-green">S: 100</span></td></tr>
+<tr><td>2</td><td>88</td><td><span class="text-red">L: 10</span> / S: 46</td></tr>
+<tr><td>3</td><td>88</td><td><span class="text-red">L: 10</span> / S: 52</td></tr>
+<tr><td>4</td><td>88</td><td><span class="text-red">L: 10</span> / S: 53</td></tr>
+<tr><td>5</td><td>88</td><td><span class="text-red">L: 10</span> / S: 50</td></tr>
 </tbody>
 </table>
 </div>
@@ -852,9 +852,9 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td><span class="text-green">96</span></td><td>L: 19 / S: <span class="text-red">0</span></td></tr>
-<tr><td>1</td><td>78</td><td>L: 36 / S: <span class="text-red">5</span></td></tr>
-<tr><td>2</td><td>78</td><td>L: 36 / S: <span class="text-red">5</span></td></tr>
+<tr><td>0.5</td><td><span class="text-green">96</span></td><td>L: 19 / <span class="text-red">S: 0</span></td></tr>
+<tr><td>1</td><td>78</td><td>L: 36 / <span class="text-red">S: 5</span></td></tr>
+<tr><td>2</td><td>78</td><td>L: 36 / <span class="text-red">S: 5</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -865,11 +865,11 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td><span class="text-red">6</span></td><td>L: <span class="text-green">100</span> / S: <span class="text-red">10</span></td></tr>
-<tr><td>1</td><td><span class="text-red">2</span></td><td>L: <span class="text-green">100</span> / S: 48</td></tr>
-<tr><td>2</td><td><span class="text-red">2</span></td><td>L: <span class="text-green">100</span> / S: 59</td></tr>
-<tr><td>3</td><td><span class="text-red">2</span></td><td>L: <span class="text-green">100</span> / S: 69</td></tr>
-<tr><td>4</td><td><span class="text-red">2</span></td><td>L: <span class="text-green">100</span> / S: 69</td></tr>
+<tr><td>0.5</td><td><span class="text-red">6</span></td><td><span class="text-green">L: 100</span> / <span class="text-red">S: 10</span></td></tr>
+<tr><td>1</td><td><span class="text-red">2</span></td><td><span class="text-green">L: 100</span> / S: 48</td></tr>
+<tr><td>2</td><td><span class="text-red">2</span></td><td><span class="text-green">L: 100</span> / S: 59</td></tr>
+<tr><td>3</td><td><span class="text-red">2</span></td><td><span class="text-green">L: 100</span> / S: 69</td></tr>
+<tr><td>4</td><td><span class="text-red">2</span></td><td><span class="text-green">L: 100</span> / S: 69</td></tr>
 </tbody>
 </table>
 </div>
@@ -880,10 +880,10 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td>42</td><td>L: 27 / S: <span class="text-green">92</span></td></tr>
-<tr><td>1</td><td>29</td><td>L: 58 / S: <span class="text-green">90</span></td></tr>
-<tr><td>2</td><td>48</td><td>L: 47 / S: <span class="text-green">90</span></td></tr>
-<tr><td>3</td><td>48</td><td>L: 47 / S: <span class="text-green">90</span></td></tr>
+<tr><td>0.5</td><td>42</td><td>L: 27 / <span class="text-green">S: 92</span></td></tr>
+<tr><td>1</td><td>29</td><td>L: 58 / <span class="text-green">S: 90</span></td></tr>
+<tr><td>2</td><td>48</td><td>L: 47 / <span class="text-green">S: 90</span></td></tr>
+<tr><td>3</td><td>48</td><td>L: 47 / <span class="text-green">S: 90</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -894,7 +894,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 49</td></tr>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td><span class="text-green">L: 100</span> / S: 49</td></tr>
 <tr><td>1</td><td><span class="text-red">0</span></td><td>L: 81 / S: 54</td></tr>
 </tbody>
 </table>
@@ -918,9 +918,9 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td>47</td><td>L: 46 / S: <span class="text-green">95</span></td></tr>
-<tr><td>1</td><td>42</td><td>L: 57 / S: <span class="text-green">91</span></td></tr>
-<tr><td>2</td><td>48</td><td>L: 49 / S: <span class="text-green">95</span></td></tr>
+<tr><td>0.5</td><td>47</td><td>L: 46 / <span class="text-green">S: 95</span></td></tr>
+<tr><td>1</td><td>42</td><td>L: 57 / <span class="text-green">S: 91</span></td></tr>
+<tr><td>2</td><td>48</td><td>L: 49 / <span class="text-green">S: 95</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -931,8 +931,8 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>4</td><td>74</td><td>L: 28 / S: <span class="text-red">7</span></td></tr>
-<tr><td>5</td><td>74</td><td>L: 28 / S: <span class="text-red">7</span></td></tr>
+<tr><td>4</td><td>74</td><td>L: 28 / <span class="text-red">S: 7</span></td></tr>
+<tr><td>5</td><td>74</td><td>L: 28 / <span class="text-red">S: 7</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -943,7 +943,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td>63</td><td>L: 38 / S: <span class="text-red">9</span></td></tr>
+<tr><td>0.5</td><td>63</td><td>L: 38 / <span class="text-red">S: 9</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -954,12 +954,12 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td><span class="text-green">100</span></td><td>L: 11 / S: <span class="text-red">0</span></td></tr>
-<tr><td>1</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">6</span> / S: <span class="text-red">0</span></td></tr>
-<tr><td>2</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">4</span> / S: <span class="text-red">0</span></td></tr>
-<tr><td>3</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">3</span> / S: <span class="text-red">0</span></td></tr>
-<tr><td>4</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">3</span> / S: <span class="text-red">0</span></td></tr>
-<tr><td>5</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">3</span> / S: <span class="text-red">0</span></td></tr>
+<tr><td>0.5</td><td><span class="text-green">100</span></td><td>L: 11 / <span class="text-red">S: 0</span></td></tr>
+<tr><td>1</td><td><span class="text-green">100</span></td><td><span class="text-red">L: 6</span> / <span class="text-red">S: 0</span></td></tr>
+<tr><td>2</td><td><span class="text-green">100</span></td><td><span class="text-red">L: 4</span> / <span class="text-red">S: 0</span></td></tr>
+<tr><td>3</td><td><span class="text-green">100</span></td><td><span class="text-red">L: 3</span> / <span class="text-red">S: 0</span></td></tr>
+<tr><td>4</td><td><span class="text-green">100</span></td><td><span class="text-red">L: 3</span> / <span class="text-red">S: 0</span></td></tr>
+<tr><td>5</td><td><span class="text-green">100</span></td><td><span class="text-red">L: 3</span> / <span class="text-red">S: 0</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -970,10 +970,10 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td>54</td><td>L: 28 / S: <span class="text-green">98</span></td></tr>
-<tr><td>1</td><td>56</td><td>L: 25 / S: <span class="text-green">94</span></td></tr>
-<tr><td>2</td><td>51</td><td>L: 18 / S: <span class="text-green">96</span></td></tr>
-<tr><td>5</td><td>77</td><td>L: <span class="text-red">8</span> / S: 79</td></tr>
+<tr><td>0.5</td><td>54</td><td>L: 28 / <span class="text-green">S: 98</span></td></tr>
+<tr><td>1</td><td>56</td><td>L: 25 / <span class="text-green">S: 94</span></td></tr>
+<tr><td>2</td><td>51</td><td>L: 18 / <span class="text-green">S: 96</span></td></tr>
+<tr><td>5</td><td>77</td><td><span class="text-red">L: 8</span> / S: 79</td></tr>
 </tbody>
 </table>
 </div>
@@ -984,7 +984,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: <span class="text-red">5</span></td></tr>
+<tr><td>0.5</td><td><span class="text-red">0</span></td><td><span class="text-green">L: 100</span> / <span class="text-red">S: 5</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -995,7 +995,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td>36</td><td>L: 74 / S: <span class="text-red">0</span></td></tr>
+<tr><td>0.5</td><td>36</td><td>L: 74 / <span class="text-red">S: 0</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -1006,7 +1006,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td>62</td><td>L: 45 / S: <span class="text-red">0</span></td></tr>
+<tr><td>0.5</td><td>62</td><td>L: 45 / <span class="text-red">S: 0</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -1017,7 +1017,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <table class="blog-compact-table">
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
-<tr><td>0.5</td><td><span class="text-red">10</span></td><td>L: <span class="text-green">94</span> / S: <span class="text-red">0</span></td></tr>
+<tr><td>0.5</td><td><span class="text-red">10</span></td><td><span class="text-green">L: 94</span> / <span class="text-red">S: 0</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -1029,9 +1029,9 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-green">93</span></td><td>L: 16 / S: 33</td></tr>
-<tr><td>1</td><td><span class="text-green">98</span></td><td>L: <span class="text-red">6</span> / S: 33</td></tr>
-<tr><td>2</td><td><span class="text-green">98</span></td><td>L: <span class="text-red">6</span> / S: 53</td></tr>
-<tr><td>3</td><td><span class="text-green">98</span></td><td>L: <span class="text-red">6</span> / S: 53</td></tr>
+<tr><td>1</td><td><span class="text-green">98</span></td><td><span class="text-red">L: 6</span> / S: 33</td></tr>
+<tr><td>2</td><td><span class="text-green">98</span></td><td><span class="text-red">L: 6</span> / S: 53</td></tr>
+<tr><td>3</td><td><span class="text-green">98</span></td><td><span class="text-red">L: 6</span> / S: 53</td></tr>
 </tbody>
 </table>
 </div>
