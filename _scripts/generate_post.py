@@ -66,7 +66,7 @@ def generate_grouped_html(data, section_type):
         html_parts.append('<table class="blog-compact-table">')
         
         if section_type == 'combined':
-            html_parts.append('<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>')
+            html_parts.append('<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>')
             html_parts.append('<tbody>')
             for row in rows:
                 yrs = format_years(row.get('lookback_(y)', 0))
@@ -78,7 +78,7 @@ def generate_grouped_html(data, section_type):
             html_parts.append('</tbody>')
             
         else:
-            html_parts.append('<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>')
+            html_parts.append('<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>')
             html_parts.append('<tbody>')
             for row in rows:
                 yrs = format_years(row.get('lookback_(y)', 0))

@@ -85,7 +85,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">AUSTRALIAN DOLLAR</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
 <tr><td>1</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
@@ -97,7 +97,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">BBG COMMODITY</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">4</span></td><td><span class="text-green">96</span></td></tr>
 <tr><td>1</td><td><span class="text-red">5</span></td><td><span class="text-green">95</span></td></tr>
@@ -112,7 +112,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">BITCOIN</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
 </tbody>
@@ -123,7 +123,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">BRAZILIAN REAL</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
 </tbody>
@@ -134,7 +134,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">BRENT LAST DAY</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>1</td><td><span class="text-green">92</span></td><td><span class="text-red">8</span></td></tr>
 </tbody>
@@ -145,7 +145,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">CANADIAN DOLLAR</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
 <tr><td>1</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
@@ -157,7 +157,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">COCOA</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-green">94</span></td><td><span class="text-red">6</span></td></tr>
 <tr><td>1</td><td><span class="text-green">96</span></td><td><span class="text-red">4</span></td></tr>
@@ -173,7 +173,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">EURO FX/BRITISH POUND XRATE</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">10</span></td><td><span class="text-green">90</span></td></tr>
 <tr><td>1</td><td><span class="text-red">9</span></td><td><span class="text-green">91</span></td></tr>
@@ -186,7 +186,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">EURO FX/JAPANESE YEN XRATE</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">3</span></td><td><span class="text-green">97</span></td></tr>
 <tr><td>1</td><td><span class="text-red">3</span></td><td><span class="text-green">97</span></td></tr>
@@ -202,7 +202,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">JAPANESE YEN</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>1</td><td><span class="text-green">91</span></td><td><span class="text-red">9</span></td></tr>
 </tbody>
@@ -213,7 +213,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">MSCI EAFE</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>2</td><td><span class="text-red">10</span></td><td><span class="text-green">90</span></td></tr>
 <tr><td>3</td><td><span class="text-red">7</span></td><td><span class="text-green">93</span></td></tr>
@@ -227,7 +227,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">NZ DOLLAR</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-green">99</span></td><td><span class="text-red">1</span></td></tr>
 <tr><td>1</td><td><span class="text-green">94</span></td><td><span class="text-red">6</span></td></tr>
@@ -243,7 +243,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">OATS</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-green">93</span></td><td><span class="text-red">7</span></td></tr>
 </tbody>
@@ -254,7 +254,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">PALLADIUM</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
 <tr><td>1</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
@@ -269,7 +269,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">ROUGH RICE</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
 </tbody>
@@ -280,7 +280,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">RUSSELL E-MINI</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">5</span></td><td><span class="text-green">95</span></td></tr>
 <tr><td>1</td><td><span class="text-red">5</span></td><td><span class="text-green">95</span></td></tr>
@@ -296,7 +296,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">SILVER</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
 <tr><td>1</td><td><span class="text-green">100</span></td><td><span class="text-red">0</span></td></tr>
@@ -308,7 +308,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">SUGAR NO. 11</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>3</td><td><span class="text-green">92</span></td><td><span class="text-red">8</span></td></tr>
 <tr><td>4</td><td><span class="text-green">92</span></td><td><span class="text-red">8</span></td></tr>
@@ -321,7 +321,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">UST 2Y NOTE</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">9</span></td><td><span class="text-green">91</span></td></tr>
 </tbody>
@@ -332,7 +332,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">UST 5Y NOTE</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">0</span></td><td><span class="text-green">100</span></td></tr>
 </tbody>
@@ -343,7 +343,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">UST BOND</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Spec</th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead>
 <tbody>
 <tr><td>3</td><td><span class="text-red">6</span></td><td><span class="text-green">94</span></td></tr>
 <tr><td>4</td><td><span class="text-red">6</span></td><td><span class="text-green">94</span></td></tr>
@@ -381,7 +381,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">PALLADIUM</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>1</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">95</span> / S: <span class="text-green">91</span></td></tr>
 <tr><td>2</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">96</span> / S: <span class="text-green">93</span></td></tr>
@@ -394,7 +394,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">SUGAR NO. 11</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>4</td><td><span class="text-green">92</span></td><td>L: <span class="text-red">9</span> / S: <span class="text-red">10</span></td></tr>
 <tr><td>5</td><td><span class="text-green">92</span></td><td>L: <span class="text-red">9</span> / S: <span class="text-red">10</span></td></tr>
@@ -527,7 +527,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">AUSTRALIAN DOLLAR</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 76</td></tr>
 <tr><td>1</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 82</td></tr>
@@ -539,7 +539,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">BBG COMMODITY</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">4</span></td><td>L: <span class="text-green">97</span> / S: 79</td></tr>
 <tr><td>1</td><td><span class="text-red">5</span></td><td>L: <span class="text-green">91</span> / S: 79</td></tr>
@@ -554,7 +554,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">BITCOIN</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: <span class="text-red">5</span></td></tr>
 </tbody>
@@ -565,7 +565,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">BRAZILIAN REAL</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: 69</td></tr>
 </tbody>
@@ -576,7 +576,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">BRENT LAST DAY</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>1</td><td><span class="text-green">92</span></td><td>L: <span class="text-red">8</span> / S: 75</td></tr>
 </tbody>
@@ -587,7 +587,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">BRITISH POUND</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td>13</td><td>L: 78 / S: <span class="text-green">98</span></td></tr>
 </tbody>
@@ -598,7 +598,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">CANADIAN DOLLAR</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 87</td></tr>
 <tr><td>1</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 87</td></tr>
@@ -610,7 +610,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">COCOA</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-green">94</span></td><td>L: <span class="text-red">7</span> / S: 25</td></tr>
 <tr><td>1</td><td><span class="text-green">96</span></td><td>L: <span class="text-red">5</span> / S: 21</td></tr>
@@ -626,7 +626,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">COPPER- #1</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td>51</td><td>L: 47 / S: <span class="text-green">97</span></td></tr>
 <tr><td>1</td><td>32</td><td>L: 60 / S: <span class="text-green">97</span></td></tr>
@@ -642,7 +642,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">E-MINI S&P 500</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>1</td><td>52</td><td>L: 34 / S: <span class="text-green">91</span></td></tr>
 <tr><td>2</td><td>52</td><td>L: 32 / S: <span class="text-green">91</span></td></tr>
@@ -657,7 +657,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">ETHER CASH SETTLED</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>4</td><td>48</td><td>L: 56 / S: <span class="text-red">10</span></td></tr>
 <tr><td>5</td><td>48</td><td>L: 65 / S: <span class="text-red">6</span></td></tr>
@@ -669,7 +669,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">EURO FX/BRITISH POUND XRATE</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">10</span></td><td>L: <span class="text-green">97</span> / S: 26</td></tr>
 <tr><td>1</td><td><span class="text-red">9</span></td><td>L: <span class="text-green">97</span> / S: 59</td></tr>
@@ -682,7 +682,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">EURO FX/JAPANESE YEN XRATE</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">3</span></td><td>L: 72 / S: 83</td></tr>
 <tr><td>1</td><td><span class="text-red">3</span></td><td>L: 72 / S: 83</td></tr>
@@ -698,7 +698,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">FRZN CONCENTRATED ORANGE JUICE</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td>42</td><td>L: 53 / S: <span class="text-green">97</span></td></tr>
 </tbody>
@@ -709,7 +709,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">GOLD</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td>62</td><td>L: 30 / S: <span class="text-green">95</span></td></tr>
 <tr><td>1</td><td>54</td><td>L: 31 / S: <span class="text-green">95</span></td></tr>
@@ -725,7 +725,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">JAPANESE YEN</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td>85</td><td>L: <span class="text-red">10</span> / S: <span class="text-green">100</span></td></tr>
 <tr><td>1</td><td><span class="text-green">91</span></td><td>L: <span class="text-red">6</span> / S: 41</td></tr>
@@ -737,7 +737,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">LIVE CATTLE</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td>44</td><td>L: 44 / S: <span class="text-green">97</span></td></tr>
 <tr><td>1</td><td>44</td><td>L: 44 / S: <span class="text-green">98</span></td></tr>
@@ -749,7 +749,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">MSCI EAFE</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>2</td><td><span class="text-red">10</span></td><td>L: <span class="text-green">92</span> / S: 74</td></tr>
 <tr><td>3</td><td><span class="text-red">7</span></td><td>L: <span class="text-green">94</span> / S: 60</td></tr>
@@ -763,7 +763,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">NIKKEI STOCK AVERAGE YEN DENOM</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td>15</td><td>L: 33 / S: <span class="text-green">100</span></td></tr>
 <tr><td>1</td><td>11</td><td>L: 48 / S: <span class="text-green">96</span></td></tr>
@@ -775,7 +775,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">NZ DOLLAR</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-green">99</span></td><td>L: <span class="text-red">3</span> / S: 39</td></tr>
 <tr><td>1</td><td><span class="text-green">94</span></td><td>L: <span class="text-red">5</span> / S: 26</td></tr>
@@ -791,7 +791,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">OATS</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-green">93</span></td><td>L: 13 / S: 24</td></tr>
 </tbody>
@@ -802,7 +802,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">PALLADIUM</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">90</span> / S: 84</td></tr>
 <tr><td>1</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">95</span> / S: <span class="text-green">91</span></td></tr>
@@ -817,7 +817,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">PLATINUM</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td>40</td><td>L: 24 / S: <span class="text-green">100</span></td></tr>
 <tr><td>1</td><td>28</td><td>L: 58 / S: <span class="text-green">95</span></td></tr>
@@ -831,7 +831,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">ROUGH RICE</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: 47</td></tr>
 </tbody>
@@ -842,7 +842,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">RUSSELL E-MINI</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">5</span></td><td>L: <span class="text-green">93</span> / S: 69</td></tr>
 <tr><td>1</td><td><span class="text-red">5</span></td><td>L: <span class="text-green">93</span> / S: 79</td></tr>
@@ -858,7 +858,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">SILVER</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: 52</td></tr>
 <tr><td>1</td><td><span class="text-green">100</span></td><td>L: <span class="text-red">0</span> / S: 59</td></tr>
@@ -870,7 +870,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">SO AFRICAN RAND</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td>49</td><td>L: 46 / S: <span class="text-green">97</span></td></tr>
 <tr><td>1</td><td>42</td><td>L: 56 / S: <span class="text-green">93</span></td></tr>
@@ -883,7 +883,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">SOYBEAN MEAL</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td>51</td><td>L: 47 / S: <span class="text-green">93</span></td></tr>
 </tbody>
@@ -894,7 +894,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">SOYBEANS</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td>64</td><td>L: 37 / S: <span class="text-red">8</span></td></tr>
 </tbody>
@@ -905,7 +905,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">SUGAR NO. 11</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>3</td><td><span class="text-green">92</span></td><td>L: <span class="text-red">9</span> / S: 11</td></tr>
 <tr><td>4</td><td><span class="text-green">92</span></td><td>L: <span class="text-red">9</span> / S: <span class="text-red">10</span></td></tr>
@@ -918,7 +918,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">SWISS FRANC</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>2</td><td>60</td><td>L: 14 / S: <span class="text-green">90</span></td></tr>
 <tr><td>5</td><td>81</td><td>L: <span class="text-red">7</span> / S: 76</td></tr>
@@ -930,7 +930,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">USD INDEX</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td>13</td><td>L: <span class="text-green">96</span> / S: <span class="text-red">8</span></td></tr>
 </tbody>
@@ -941,7 +941,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">UST 10Y NOTE</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td>26</td><td>L: 81 / S: <span class="text-red">0</span></td></tr>
 </tbody>
@@ -952,7 +952,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">UST 2Y NOTE</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">9</span></td><td>L: <span class="text-green">92</span> / S: 29</td></tr>
 <tr><td>1</td><td>24</td><td>L: <span class="text-green">93</span> / S: 23</td></tr>
@@ -964,7 +964,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">UST 5Y NOTE</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>0.5</td><td><span class="text-red">0</span></td><td>L: <span class="text-green">100</span> / S: <span class="text-red">1</span></td></tr>
 </tbody>
@@ -975,7 +975,7 @@ If you want to learn more about how to apply this data in your trading see [Reso
 <div class="asset-card-header">UST BOND</div>
 <div class="asset-table-wrapper">
 <table class="blog-compact-table">
-<thead><tr><th>Yrs</th><th>Comm</th><th>Speculators<br><small>(Large / Small)</small></th></tr></thead>
+<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead>
 <tbody>
 <tr><td>3</td><td><span class="text-red">6</span></td><td>L: 85 / S: 76</td></tr>
 <tr><td>4</td><td><span class="text-red">6</span></td><td>L: 78 / S: 84</td></tr>
