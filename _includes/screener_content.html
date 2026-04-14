@@ -155,6 +155,59 @@
       font-size: 0.75rem;
     }
   }
+  /* Custom Searchable Dropdown */
+  .custom-select-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .options-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 250px;
+    overflow-y: auto;
+    background: var(--global-bg-color, #1a1a1a);
+    border: 1px solid var(--global-divider-color, #444);
+    border-top: none;
+    z-index: 1001;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+
+  .options-dropdown.show {
+    display: block;
+  }
+
+  .option-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: var(--global-text-color, #ccc);
+    border-bottom: 1px solid var(--global-divider-color, #222);
+  }
+
+  .option-item:last-child {
+    border-bottom: none;
+  }
+
+  .option-item:hover {
+    background: var(--global-divider-color, #333);
+    color: var(--global-theme-color, #fff);
+  }
+
+  .option-item.selected {
+    background: var(--global-theme-color, #007bff);
+    color: white;
+  }
+
+  /* Adjust existing styles for search input */
+  #asset_search {
+    cursor: pointer;
+    text-overflow: ellipsis;
+  }
 </style>
 
 <div id="loading" class="loading-overlay">
@@ -174,10 +227,15 @@
 
 
     <div class="controls-group">
-      <label for="asset_dropdown">Asset:</label>
-      <select id="asset_dropdown" class="threshold-input" style="width: 200px" onchange="handleAssetChange()">
-        <option value="">All Assets</option>
-      </select>
+      <label for="asset_search">Asset:</label>
+      <div class="custom-select-container" id="asset-select-container">
+        <input type="text" id="asset_search" class="threshold-input" style="width: 200px" placeholder="Search Asset..."
+          autocomplete="off" onfocus="showDropdown(); filterOptions(); this.select()" oninput="filterOptions()">
+        <div id="asset_options_dropdown" class="options-dropdown">
+          <div class="option-item" onclick="selectOption('')">All Assets</div>
+        </div>
+        <input type="hidden" id="asset_dropdown" value="">
+      </div>
     </div>
 
     <div class="controls-group">
@@ -282,16 +340,8 @@
       document.getElementById("last-updated").innerHTML =
         `<strong>Position data as of:</strong> ${escapeHTML(dataDate)} <span style="margin-left: 15px; font-size: 0.9em; opacity: 0.7;">(Last updated: ${escapeHTML(metadata.last_updated.split(" ")[0])})</span>`;
 
-      // Populate dropdown (sorted alphabetically)
-      const dropdown = document.getElementById("asset_dropdown");
-      const sortedMarkets = [...metadata.markets].sort((a, b) => a.localeCompare(b));
-
-      sortedMarkets.forEach((market) => {
-        const opt = document.createElement("option");
-        opt.value = market;
-        opt.innerText = market;
-        dropdown.appendChild(opt);
-      });
+      // Populate custom dropdown
+      populateDropdown(metadata.markets);
 
       document.getElementById("loading").style.display = "none";
 
@@ -330,6 +380,17 @@
       comboBtn.classList.add("btn-outline-primary");
     }
     document.getElementById("asset_dropdown").value = "";
+    document.getElementById("asset_search").value = "";
+    // Reset dropdown visibility
+    const items = document.querySelectorAll(".option-item");
+    items.forEach(item => {
+      item.style.display = "";
+      if (item.innerText === "All Assets") {
+        item.classList.add("selected");
+      } else {
+        item.classList.remove("selected");
+      }
+    });
     document.getElementById("year_dropdown").value = "0.5";
     document.getElementById("low").value = metadata.default_low;
     document.getElementById("high").value = metadata.default_high;
@@ -356,6 +417,113 @@
     }
     applyFilters();
   }
+
+  // Searchable Dropdown Logic
+  function populateDropdown(markets) {
+    const dropdown = document.getElementById("asset_options_dropdown");
+    const sortedMarkets = [...markets].sort((a, b) => a.localeCompare(b));
+
+    // Clear existing options except "All Assets"
+    dropdown.innerHTML = '<div class="option-item" onclick="selectOption(\'\')">All Assets</div>';
+
+    sortedMarkets.forEach((market) => {
+      const item = document.createElement("div");
+      item.className = "option-item";
+      item.innerText = market;
+      item.onclick = () => selectOption(market);
+      dropdown.appendChild(item);
+    });
+  }
+
+  function showDropdown() {
+    document.getElementById("asset_options_dropdown").classList.add("show");
+  }
+
+  function hideDropdown() {
+    document.getElementById("asset_options_dropdown").classList.remove("show");
+  }
+
+  function filterOptions() {
+    const input = document.getElementById("asset_search");
+    const filter = input.value.toLowerCase();
+    const dropdown = document.getElementById("asset_options_dropdown");
+    const items = dropdown.getElementsByClassName("option-item");
+
+    showDropdown();
+
+    let visibleCount = 0;
+    for (let i = 0; i < items.length; i++) {
+      const text = items[i].innerText.toLowerCase();
+      if (text.indexOf(filter) > -1) {
+        items[i].style.display = "";
+        visibleCount++;
+      } else {
+        items[i].style.display = "none";
+      }
+    }
+
+    // If input is cleared manually, reset the filter
+    if (filter === "") {
+      document.getElementById("asset_dropdown").value = "";
+      
+      // Select 'All Assets' visually
+      for (let i = 0; i < items.length; i++) {
+        if (items[i].innerText === "All Assets") {
+          items[i].classList.add("selected");
+        } else {
+          items[i].classList.remove("selected");
+        }
+      }
+      
+      applyFilters();
+    }
+  }
+
+  function selectOption(market) {
+    const searchInput = document.getElementById("asset_search");
+    const hiddenInput = document.getElementById("asset_dropdown");
+
+    searchInput.value = market === "" ? "" : market;
+    hiddenInput.value = market;
+
+    // Remove selected class from all and add to current
+    const items = document.querySelectorAll(".option-item");
+    items.forEach(item => {
+      if (item.innerText === market || (market === "" && item.innerText === "All Assets")) {
+        item.classList.add("selected");
+      } else {
+        item.classList.remove("selected");
+      }
+    });
+
+    hideDropdown();
+    handleAssetChange();
+  }
+
+  // Click outside to close dropdown
+  window.addEventListener("click", function (e) {
+    const container = document.getElementById("asset-select-container");
+    if (container && !container.contains(e.target)) {
+      hideDropdown();
+      // Revert input text to the currently selected filter if abandoned
+      const searchInput = document.getElementById("asset_search");
+      const hiddenInput = document.getElementById("asset_dropdown");
+      if (searchInput.value !== hiddenInput.value) {
+        searchInput.value = hiddenInput.value;
+      }
+    }
+  });
+
+  // Handle Enter key in search input
+  document.getElementById("asset_search")?.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      const dropdown = document.getElementById("asset_options_dropdown");
+      const visibleItems = Array.from(dropdown.querySelectorAll(".option-item")).filter(item => item.style.display !== "none");
+      if (visibleItems.length > 0) {
+        visibleItems[0].click();
+      }
+    }
+  });
 
   function applyFilters() {
     renderTable();
