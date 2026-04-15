@@ -340,12 +340,16 @@ ul.task-list input[type="checkbox"] {
     padding: 8px 12px;
     text-align: center;
     border: 1px solid var(--global-divider-color, #333) !important;
+  }
+  
+  td {
     color: var(--global-text-color);
   }
   
   th {
     background-color: var(--global-bg-color, #1a1a1a);
     font-weight: 600;
+    color: var(--global-text-color) !important;
   }
 
   /* Responsive Card Layout for Screener Tables (Mobile Only) */
