@@ -276,7 +276,7 @@
       href="{{ '/resources/' | relative_url }}">Resources</a>
   </p>
 
-  <div class="styled-table-container">
+  <div class="styled-table-container" id="table-container">
     <table id="data-table" class="table table-sm table-hover screener-table">
       <thead id="table-head"></thead>
       <tbody id="table-body"></tbody>
@@ -537,7 +537,7 @@
       if (val < 0) return "text-red";
       if (val > 0) return "text-green";
     }
-    return "";
+    return "text-white";
   }
 
   function renderTable() {
@@ -620,11 +620,10 @@
       }
     });
 
-    const tbody = document.getElementById("table-body");
-    const thead = document.getElementById("table-head");
+    const container = document.getElementById("table-container");
 
     if (filtered.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="100%">No data available.</td></tr>';
+      container.innerHTML = '<table class="table table-sm table-hover screener-table"><tbody><tr><td colspan="100%">No data available.</td></tr></tbody></table>';
       return;
     }
 
@@ -635,14 +634,7 @@
         { id: "market_and_exchange_names", label: "Market" },
         { id: "lookback_(y)", label: "Years" },
         { id: "willco_commercials_index", label: "Commercials", type: "index" },
-        { id: "combined_speculators", label: "Speculators", type: "index" },
-        // { id: 'commercials_net_(%)', label: 'Commercials Net', type: 'percent' },
-        // { id: 'large_speculators_net_(%)', label: 'Large Speculators Net', type: 'percent' },
-        // { id: 'small_speculators_net_(%)', label: 'Small Speculators Net', type: 'percent' },
-        // { id: 'commercials_change_(%)', label: 'Commercials Change', type: 'percent' },
-        // { id: 'large_speculators_change_(%)', label: 'Large Speculators Change', type: 'percent' },
-        // { id: 'small_speculators_change_(%)', label: 'Small Speculators Change', type: 'percent' },
-        // { id: 'as_of_date_in_form_yyyy_mm_dd', label: 'Date' }
+        { id: "combined_speculators", label: "Speculators", type: "index" }
       ];
     } else {
       columns = [
@@ -650,19 +642,12 @@
         { id: "lookback_(y)", label: "Years" },
         { id: "willco_commercials_index", label: "Commercials", type: "index" },
         { id: "willco_large_specs_index", label: "Large Speculators", type: "index" },
-        { id: "willco_small_specs_index", label: "Small Speculators", type: "index" },
-        // { id: 'commercials_net_(%)', label: 'Commercials Net', type: 'percent' },
-        // { id: 'large_speculators_net_(%)', label: 'Large Speculators Net', type: 'percent' },
-        // { id: 'small_speculators_net_(%)', label: 'Small Speculators Net', type: 'percent' },
-        // { id: 'commercials_change_(%)', label: 'Commercials Change', type: 'percent' },
-        // { id: 'large_speculators_change_(%)', label: 'Large Speculators Change', type: 'percent' },
-        // { id: 'small_speculators_change_(%)', label: 'Small Speculators Change', type: 'percent' },
-        // { id: 'as_of_date_in_form_yyyy_mm_dd', label: 'Date' }
+        { id: "willco_small_specs_index", label: "Small Speculators", type: "index" }
       ];
     }
 
-    // Render Head
-    thead.innerHTML = `<tr>${columns
+    // Generate flat table head
+    const theadHTML = `<tr>${columns
       .map((c) => {
         const isSorted = sortConfig.key === c.id;
         const arrow = isSorted ? (sortConfig.direction === "asc" ? " ↑" : " ↓") : "";
@@ -670,8 +655,8 @@
       })
       .join("")}</tr>`;
 
-    // Render Body
-    tbody.innerHTML = filtered
+    // Generate flat table body
+    const tbodyHTML = filtered
       .map((row) => {
         return `<tr>${columns
           .map((col) => {
@@ -679,24 +664,82 @@
             let displayVal = val;
 
             if (col.id === "lookback_(y)") {
-              // Convert "1.0" to 1, but keep "0.5"
               displayVal = parseFloat(val);
             } else if (typeof val === "number") {
-              // Format to integer (no fractions for index calculations)
               displayVal = Math.round(val);
-
-              // Add % sign for percent columns
-              if (col.type === "percent") {
-                displayVal = displayVal + "%";
-              }
+              if (col.type === "percent") displayVal += "%";
             }
-
             const colorClass = getColorClass(val, col.type, low, high);
             return `<td class="${escapeHTML(colorClass)}" data-label="${escapeHTML(col.label)}">${escapeHTML(displayVal)}</td>`;
           })
           .join("")}</tr>`;
       })
       .join("");
+
+    const flatTableHTML = `
+      <table id="data-table" class="table table-sm table-hover screener-table">
+        <thead>${theadHTML}</thead>
+        <tbody>${tbodyHTML}</tbody>
+      </table>
+    `;
+
+    const isGroupedView = parseFloat(selectedYear) > 0.5;
+
+    if (!isGroupedView) {
+      container.innerHTML = flatTableHTML;
+    } else {
+      // Group data by asset while maintaining current sort order for cards
+      const groupedData = {};
+      const orderedAssets = [];
+      filtered.forEach(row => {
+        const asset = row.market_and_exchange_names;
+        if (!groupedData[asset]) {
+          groupedData[asset] = [];
+          orderedAssets.push(asset);
+        }
+        groupedData[asset].push(row);
+      });
+
+      const groupedHTMLParts = [];
+      orderedAssets.forEach(asset => {
+        const rows = groupedData[asset];
+        groupedHTMLParts.push('<div class="blog-asset-card">');
+        groupedHTMLParts.push(`<div class="asset-card-header">${escapeHTML(asset)}</div>`);
+        groupedHTMLParts.push('<div class="asset-table-wrapper"><table class="blog-compact-table">');
+        
+        if (combineSpeculators) {
+          groupedHTMLParts.push('<thead><tr><th>Yrs</th><th>Comm</th><th>Specs</th></tr></thead><tbody>');
+          rows.forEach(row => {
+            const yrs = parseFloat(row["lookback_(y)"]);
+            const mComm = Math.round(row.willco_commercials_index);
+            const classComm = getColorClass(mComm, 'index', low, high);
+            const mSpec = 100 - mComm;
+            const classSpec = getColorClass(mSpec, 'index', low, high);
+
+            groupedHTMLParts.push(`<tr><td>${yrs}</td><td><span class="${classComm}">${mComm}</span></td><td><span class="${classSpec}">${mSpec}</span></td></tr>`);
+          });
+        } else {
+          groupedHTMLParts.push('<thead><tr><th>Yrs</th><th>Comm</th><th>Specs<br><small>(Large / Small)</small></th></tr></thead><tbody>');
+          rows.forEach(row => {
+            const yrs = parseFloat(row["lookback_(y)"]);
+            const mComm = Math.round(row.willco_commercials_index);
+            const classComm = getColorClass(mComm, 'index', low, high);
+            const mLarge = Math.round(row.willco_large_specs_index);
+            const classLarge = getColorClass(mLarge, 'index', low, high);
+            const mSmall = Math.round(row.willco_small_specs_index);
+            const classSmall = getColorClass(mSmall, 'index', low, high);
+
+            groupedHTMLParts.push(`<tr><td>${yrs}</td><td><span class="${classComm}">${mComm}</span></td><td><span class="${classLarge}">L: ${mLarge}</span> / <span class="${classSmall}">S: ${mSmall}</span></td></tr>`);
+          });
+        }
+        groupedHTMLParts.push('</tbody></table></div></div>');
+      });
+
+      const mobileHTML = `<div class="d-block d-md-none">\n${groupedHTMLParts.join('\n')}\n</div>`;
+      const desktopHTML = `<div class="d-none d-md-block">\n${flatTableHTML}\n</div>`;
+      
+      container.innerHTML = desktopHTML + '\n' + mobileHTML;
+    }
   }
 
   init();
