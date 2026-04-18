@@ -1,9 +1,0 @@
-   <!-- Twitter card -->
-   <meta property="twitter:card" content="summary_large_image">
-   <meta property="twitter:site" content="@{{ site.x_username | default: 'TODO' }}">
-   <meta property="twitter:creator" content="@{{ site.x_username | default: 'TODO' }}">
-   <meta property="twitter:title" content="{% if page.title and page.title != title %}{{ page.title }} | {{ title }}{% else %}{{ title }}{% endif %}">
-   <meta property="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-   {% if page.og_image or site.og_image %}
-     <meta property="twitter:image" content="{% if page.og_image %}{{ page.og_image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.og_image | prepend: site.baseurl | prepend: site.url }}{% endif %}">
-   {% endif %}
