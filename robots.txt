@@ -25,4 +25,15 @@ Disallow: /blog/2023/
 Disallow: /blog/2024/
 Disallow: /blog/2025/
 
+# Explicitly allow Twitterbot (and other social bots) to access everything
+User-agent: Twitterbot
+Disallow:
+
+User-agent: facebookexternalhit
+Disallow:
+
+User-agent: WhatsApp
+Disallow:
+
+# Sitemap
 Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml
