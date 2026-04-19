@@ -63,8 +63,10 @@
   {% if page.og_image or site.og_image %}
     <meta property="og:image" content="{% if page.og_image %}{{ page.og_image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.og_image | prepend: site.baseurl | prepend: site.url }}{% endif %}">
   {% endif %}
+  {% if site.logo %}
+    <meta property="og:logo" content="{{ site.logo | prepend: site.baseurl | prepend: site.url }}">
+  {% endif %}
   <meta property="og:locale" content="{{ site.lang }}">
-
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@{{ site.x_username | default: 'TODO' }}">
