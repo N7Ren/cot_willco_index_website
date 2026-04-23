@@ -54,14 +54,28 @@
 {% endif %}
 
 {% if site.serve_og_meta %}
+  {% capture og_image_path %}
+    {% if page.url == '/' or page.url == '/index.html' %}
+      {{ site.og_image | prepend: site.baseurl | prepend: site.url }}
+    {% elsif page.og_image %}
+      {{ page.og_image | prepend: site.baseurl | prepend: site.url }}
+    {% elsif page.image.path %}
+      {{ page.image.path | prepend: site.baseurl | prepend: site.url }}
+    {% elsif page.image %}
+      {{ page.image | prepend: site.baseurl | prepend: site.url }}
+    {% elsif site.og_image %}
+      {{ site.og_image | prepend: site.baseurl | prepend: site.url }}
+    {% endif %}
+  {% endcapture %}
+  {% assign og_image_path = og_image_path | strip %}
   <!-- OpenGraph -->
   <meta property="og:site_name" content="{{ title }}">
   <meta property="og:type" content="{% if is_blog_post %}article{% else %}website{% endif %}">
   <meta property="og:title" content="{% if page.title and page.title != title %}{{ page.title }} | {{ title }}{% else %}{{ title }}{% endif %}">
   <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  {% if page.og_image or site.og_image %}
-    <meta property="og:image" content="{% if page.og_image %}{{ page.og_image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.og_image | prepend: site.baseurl | prepend: site.url }}{% endif %}">
+  {% if og_image_path != '' %}
+    <meta property="og:image" content="{{ og_image_path }}">
   {% endif %}
   {% if site.logo %}
     <meta property="og:logo" content="{{ site.logo | prepend: site.baseurl | prepend: site.url }}">
@@ -69,12 +83,12 @@
   <meta property="og:locale" content="{{ site.lang }}">
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@{{ site.x_username | default: 'TODO' }}">
-  <meta name="twitter:creator" content="@{{ site.x_username | default: 'TODO' }}">
+  <meta name="twitter:site" content="@{{ site.x_username | default: 'TODO' | remove: "@" }}">
+  <meta name="twitter:creator" content="@{{ site.x_username | default: 'TODO' | remove: "@" }}">
   <meta name="twitter:title" content="{% if page.title and page.title != title %}{{ page.title }} | {{ title }}{% else %}{{ title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  {% if page.og_image or site.og_image %}
-    <meta name="twitter:image" content="{% if page.og_image %}{{ page.og_image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.og_image | prepend: site.baseurl | prepend: site.url }}{% endif %}">
+  {% if og_image_path != '' %}
+    <meta name="twitter:image" content="{{ og_image_path }}">
   {% endif %}
 {% endif %}
 

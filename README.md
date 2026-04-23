@@ -27,3 +27,5 @@ docker compose up --build
 # Stop containers and free port 8080
 docker compose down
 ```
+
+Built with help of <i>Antigravity</i>.

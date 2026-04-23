@@ -26,6 +26,8 @@ RUN apt-get update -y && \
         curl \
         git \
         imagemagick \
+        libvips \
+        libvips-dev \
         inotify-tools \
         locales \
         nodejs \

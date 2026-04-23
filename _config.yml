@@ -74,7 +74,7 @@ serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: true # Include Schema.org in the HTML head
 og_image: "/assets/img/preview.jpg" # The site-wide (default for all links) Open Graph preview image
 logo: "/assets/img/logo.jpg" # The site-wide logo image
-x_username: "@cotsetups" # Twitter/X handle for attribution
+x_username: "cotsetups" # Twitter/X handle for attribution
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -224,6 +224,7 @@ plugins:
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
+  - jekyll-og-image
 
 # Sitemap settings
 defaults:
@@ -669,3 +670,26 @@ jsonresume:
   - languages
   - interests
   - references
+
+# -----------------------------------------------------------------------------
+# Jekyll OG Image (using custom jekyll_og_image key via patch)
+# -----------------------------------------------------------------------------
+
+jekyll_og_image:
+  collections: ["posts", "pages", "news"]
+  canvas:
+    width: 1200
+    height: 630
+    background_color: "#1c1c1d"
+  header:
+    font_family: "Roboto, Bold"
+    color: "#c9c9c9"
+  content:
+    font_family: "Roboto"
+    color: "#828282"
+  metadata:
+    fields: ["date", "tags"]
+  image:
+    path: "assets/img/logo.jpg"
+    position: {x: 80, y: 100}
+  force: true
